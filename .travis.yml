@@ -1,0 +1,20 @@
+sudo: required
+
+env:
+  - EMACS=emacs-25.3
+
+before_install:
+  - sudo add-apt-repository ppa:kelleyk/emacs -y
+  - sudo apt-get update -q
+  - sudo apt-get install emacs25 -y
+  - $EMACS --version
+
+script:
+  - $EMACS -nw --batch --eval '(load-file "./init.el")'
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
