@@ -88,13 +88,6 @@
 (use-package init-loader
   :init (init-loader-load))
 
-;; vc-mode bug hack
-;; See http://www.lares.dti.ne.jp/~foozy/fujiguruma/scm/cvs-emacs.html
-(defadvice vc-before-save
-  (around examine-vc-make-backup-files activate)
-  "Examine `vc-make-backup-files' (in vc-hooks.el) at first."
-  (and vc-make-backup-files ad-do-it))
-
 ;; Environment-specific customization
 (when (file-exists-p "~/custom.el")
   (load "~/custom.el"))
