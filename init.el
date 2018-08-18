@@ -87,3 +87,7 @@
   (around examine-vc-make-backup-files activate)
   "Examine `vc-make-backup-files' (in vc-hooks.el) at first."
   (and vc-make-backup-files ad-do-it))
+
+;; Environment-specific customization
+(when (file-exists-p "~/custom.el")
+  (load "~/custom.el"))
