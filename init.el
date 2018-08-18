@@ -2,7 +2,7 @@
 
 (let ((minver "25.2"))
   (unless (version< minver emacs-version)
-    (error "This requires Emacs %s+, but actual %s" minver emacs-version)))
+    (error "Your Emacs %s is too old, please use Emacs %s+" emacs-version minver)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
