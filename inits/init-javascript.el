@@ -11,9 +11,7 @@
   (js2-mode-show-strict-warnings nil))
 
 (use-package add-node-modules-path
-  :config
-  (add-hook 'prog-mode-hook #'add-node-modules-path)
-  (add-hook 'text-mode-hook #'add-node-modules-path)
+  :hook (prog-mode text-mode)
   :custom
   (add-node-modules-path-debug t))
 
