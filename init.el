@@ -1,5 +1,9 @@
 ;; -*- lexical-binding: t -*-
 
+(let ((minver "25.2"))
+  (unless (version< minver emacs-version)
+    (error "This requires Emacs %s+, but actual %s" minver emacs-version)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
