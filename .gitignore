@@ -47,6 +47,6 @@ flycheck_*.el
 .dir-locals.el
 
 
-+# --- Custom ---
-+/inits/99_env.el
-+/recentf
+# --- Custom ---
+/inits/99_env.el
+/recentf
