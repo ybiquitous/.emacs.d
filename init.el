@@ -74,8 +74,9 @@
   (package-install 'use-package))
 (eval-when-compile
   (require 'use-package)
-  (setq use-package-always-ensure t))
-(use-package delight)
+  (setq use-package-always-ensure t)
+  ;; https://github.com/jwiegley/use-package#diminishing-and-delighting-minor-modes
+  (use-package delight))
 
 ;; init-loader
 (use-package init-loader
