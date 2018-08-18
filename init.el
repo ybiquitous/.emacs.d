@@ -13,7 +13,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(css-indent-offset tab-width)
- '(debug-on-error t)
+ '(debug-on-error nil)
  '(desktop-files-not-to-save nil)
  '(desktop-globals-to-save (quote (extended-command-history)))
  '(desktop-restore-frames nil)

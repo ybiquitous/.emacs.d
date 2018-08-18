@@ -1,9 +1,11 @@
 FROM ubuntu:latest
 
 RUN apt-get update -q && \
-    apt-get install emacs -y && \
+    apt-get install emacs ca-certificates -y && \
     emacs --version
 
-COPY . .
+COPY . .emacs.d
+
+WORKDIR .emacs.d
 
 RUN ./test.sh
