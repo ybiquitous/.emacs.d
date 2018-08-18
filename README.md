@@ -7,5 +7,5 @@ My personal `~/.emacs.d`
 ## Install
 
 ```sh
-git clone https://github.com/ybiquitous/.emacs.d.git ~/.emacs.d
+git clone git@github.com:ybiquitous/.emacs.d.git ~/.emacs.d
 ```
