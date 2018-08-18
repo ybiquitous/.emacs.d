@@ -4,66 +4,57 @@
   (unless (version< minver emacs-version)
     (error "Your Emacs %s is too old, please use Emacs %s+" emacs-version minver)))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auto-save-default nil)
- '(blink-cursor-mode nil)
- '(column-number-mode t)
- '(css-indent-offset tab-width)
- '(debug-on-error nil)
- '(desktop-files-not-to-save nil)
- '(desktop-globals-to-save (quote (extended-command-history)))
- '(desktop-restore-frames nil)
- '(desktop-save-mode t)
- '(electric-pair-mode t)
- '(global-font-lock-mode t)
- '(global-hl-line-mode t)
- '(global-linum-mode t)
- '(indent-tabs-mode nil)
- '(inhibit-startup-screen t)
- '(initial-scratch-message nil)
- '(js-indent-level 2)
- '(js-switch-indent-offset 2)
- '(line-number-mode t)
- '(line-spacing 2)
- '(load-prefer-newer t)
- '(make-backup-files nil)
- '(nxml-auto-insert-xml-declaration-flag t)
- '(nxml-default-buffer-file-coding-system (quote utf-8))
- '(nxml-slash-auto-complete-flag t)
-  '(package-selected-packages
-     (quote
-       (dotenv-mode magit easy-kill which-key tide typescript-mode ido-vertical-mode google-this hcl-mode dockerfile-mode slim-mode a google-translate delight neotree add-node-modules-path js-auto-format-mode flycheck-package package-lint projectile ruby-electric git-commit yaml-mode emmet-mode web-mode robe enh-ruby-mode highlight-symbol markdown-mode json-mode rjsx-mode js2-mode company-tern tern flycheck editorconfig yasnippet yasnippet-snippets company s exec-path-from-shell init-loader use-package)))
- '(read-buffer-completion-ignore-case t)
- '(read-file-name-completion-ignore-case t)
- '(recentf-mode t)
- '(ruby-insert-encoding-magic-comment nil)
- '(scroll-bar-mode (quote right))
- '(select-enable-clipboard t)
- '(sh-basic-offset 2)
- '(sh-indentation 2)
- '(show-paren-mode t)
- '(show-trailing-whitespace t)
- '(size-indication-mode nil)
- '(standard-indent 2)
- '(tab-width 2)
- '(tool-bar-mode nil)
- '(transient-mark-mode t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:background "black" :foreground "white")))))
+;; Basic
+(setq auto-save-default nil)
+(setq debug-on-error t)
+(setq indent-tabs-mode nil)
+(setq inhibit-startup-screen t)
+(setq initial-scratch-message nil)
+(setq line-spacing 2)
+(setq load-prefer-newer t)
+(setq make-backup-files nil)
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
+(setq select-enable-clipboard t)
+(setq show-trailing-whitespace t)
+(setq standard-indent 2)
+(setq tab-width 2)
 
-(prefer-coding-system 'utf-8-unix)
+;; Mode
+(blink-cursor-mode nil)
+(column-number-mode t)
+(electric-pair-mode t)
+(global-font-lock-mode t)
+(global-hl-line-mode t)
+(global-linum-mode t)
+(line-number-mode t)
+(recentf-mode t)
+(show-paren-mode t)
+(transient-mark-mode t)
 
+;; GUI
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode (quote right)))
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+
+;; Face
+(set-face-background 'default "black")
+(set-face-foreground 'default "white")
+(set-face-font 'default "Hack 16")
+
+;; Prompt
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; package (https://github.com/melpa/melpa)
+;; Locale
+(prefer-coding-system 'utf-8)
+
+;; Frame title
+(setq frame-title-format
+  '((:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))
+     " @ Emacs " emacs-version))
+
+;; MELPA (https://github.com/melpa/melpa)
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                  (not (gnutls-available-p))))
@@ -81,13 +72,70 @@
 (eval-when-compile
   (require 'use-package)
   (setq use-package-always-ensure t)
-  ;; https://github.com/jwiegley/use-package#diminishing-and-delighting-minor-modes
-  (use-package delight))
 
-;; init-loader
-(use-package init-loader
-  :init (init-loader-load))
+  ;; https://github.com/jwiegley/use-package#diminishing-and-delighting-minor-modes
+  (use-package delight)
+
+  ;; Sub initializations
+  (add-to-list 'load-path (expand-file-name "inits" user-emacs-directory))
+  (require 'init-desktop)
+  (require 'init-key-bindings)
+  (require 'init-utils)
+  (require 'init-exec-path)
+  (require 'init-dired)
+  (require 'init-whitespace)
+  (require 'init-ido)
+  (require 'init-yasnippet)
+  (require 'init-company)
+  (require 'init-editorconfig)
+  (require 'init-git)
+  (require 'init-highlight-symbol)
+  (require 'init-flyspell)
+  (require 'init-flycheck)
+  (require 'init-js-auto-format)
+  (require 'init-prettier)
+  (require 'init-web-mode)
+  (require 'init-javascript)
+  (require 'init-typescript)
+  (require 'init-css)
+  (require 'init-markdown)
+  (require 'init-yaml)
+  (require 'init-ruby)
+  (require 'init-slim)
+  (require 'init-docker)
+  (require 'init-perl)
+  (require 'init-shell)
+  (require 'init-shellscript)
+  (require 'init-xml)
+  (require 'init-hcl)
+  (require 'init-dotenv)
+  (require 'init-projectile)
+  (require 'init-neotree)
+  (require 'init-emmet)
+  (require 'init-which-key)
+  (require 'init-google))
+  ;; Disable less used packages
+  ;; (require 'init-java)
+
+;; emacsclient
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
+;; macOS
+(when (eq system-type 'darwin)
+  (require 'init-mac))
+
+;; Windows
+(when (eq system-type 'windows-nt)
+  (require 'init-windows))
+
+;; http://extra-vision.blogspot.com/2016/10/emacs25-package-selected-packages.html
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 ;; Environment-specific customization
-(when (file-exists-p "~/custom.el")
-  (load "~/custom.el"))
+(let ((env-file "~/.emacs-env.el"))
+  (when (file-exists-p env-file)
+    (load env-file)))

@@ -49,7 +49,7 @@ flycheck_*.el
 
 # --- Custom ---
 !/.dir-locals.el
-/inits/99_env.el
 /recentf
 /projectile-bookmarks.eld
 /ido.last
+/custom.el
