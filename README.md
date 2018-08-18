@@ -15,7 +15,7 @@ git clone git@github.com:ybiquitous/.emacs.d.git ~/.emacs.d
 Via [Docker](https://www.docker.com/). For details, see [`Dockerfile`](Dockerfile).
 
 ```sh
-docker build .
+docker build . [--no-cache]
 ```
 
 ## License
