@@ -1,16 +1,3 @@
-;;; init.el --- ybiquitous's Emacs configuration
-;;
-;; Copyright (c) 2017 ybiquitous
-;;
-;; Author: ybiquitous <ybiquitous@gmail.com>
-;; URL: https://github.com/ybiquitous/dotfiles
-
-;;; Commentary:
-
-;; This is my personal Emacs configuration.
-
-;;; Code:
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -98,5 +85,3 @@
   (around examine-vc-make-backup-files activate)
   "Examine `vc-make-backup-files' (in vc-hooks.el) at first."
   (and vc-make-backup-files ad-do-it))
-
-;;; init.el ends here
