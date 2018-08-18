@@ -78,9 +78,10 @@
 
   ;; Sub initializations
   (add-to-list 'load-path (expand-file-name "inits" user-emacs-directory))
+  (require 'init-utils)
   (require 'init-desktop)
   (require 'init-key-bindings)
-  (require 'init-utils)
+  (require 'init-highlight-symbol)
   (require 'init-exec-path)
   (require 'init-dired)
   (require 'init-whitespace)
@@ -89,7 +90,6 @@
   (require 'init-company)
   (require 'init-editorconfig)
   (require 'init-git)
-  (require 'init-highlight-symbol)
   (require 'init-avy)
   (require 'init-flyspell)
   (require 'init-flycheck)
