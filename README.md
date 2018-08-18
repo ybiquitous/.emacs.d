@@ -17,3 +17,7 @@ Via [Docker](https://www.docker.com/). For details, see [`Dockerfile`](Dockerfil
 ```sh
 docker build .
 ```
+
+## License
+
+[MIT](LICENSE)
