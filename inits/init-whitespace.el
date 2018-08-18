@@ -1,0 +1,10 @@
+(require 'whitespace)
+(setq whitespace-action '(auto-cleanup))
+(setq whitespace-display-mappings '((space-mark ?\u3000 [?\u25a1])
+                                     (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
+(setq whitespace-space-regexp "\\(\\u3000+\\)")
+(setq whitespace-line-column 120)
+(setq whitespace-style '(face tabs spaces trailing lines-tail space-mark tab-mark))
+(global-whitespace-mode t)
+
+(provide 'init-whitespace)
