@@ -10,7 +10,6 @@
 (setq indent-tabs-mode nil)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
-(setq line-spacing 2)
 (setq load-prefer-newer t)
 (setq make-backup-files nil)
 (setq read-buffer-completion-ignore-case t)
@@ -19,6 +18,7 @@
 (setq show-trailing-whitespace t)
 (setq standard-indent 2)
 (setq tab-width 2)
+(setq-default line-spacing 0.1)
 
 ;; Mode
 (blink-cursor-mode nil)
