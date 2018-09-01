@@ -21,7 +21,7 @@
 
 (require 'bind-key)
 (bind-keys*
-  ("C-c d"   . dasherize-word)
+  ("C-c c d" . dasherize-word)
   ("C-c c l" . lower-camel-case-word)
   ("C-c c u" . upper-camel-case-word))
 

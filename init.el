@@ -125,7 +125,8 @@
 
 ;; macOS
 (when (eq system-type 'darwin)
-  (require 'init-mac))
+  (require 'init-mac)
+  (require 'init-dash))
 
 ;; Windows
 (when (eq system-type 'windows-nt)
