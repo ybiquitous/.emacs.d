@@ -3,7 +3,7 @@
   :mode (("\\.md\\'" . gfm-mode)
           ("\\.markdown\\'" . gfm-mode))
   :custom
-  (markdown-command "github-markup")
+  (markdown-command "github-markup-custom")
   (markdown-command-needs-filename t)
   (markdown-content-type "application/xhtml+xml")
   (markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"
