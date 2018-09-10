@@ -18,7 +18,7 @@
 (setq show-trailing-whitespace t)
 (setq standard-indent 2)
 (setq tab-width 2)
-(setq-default line-spacing 0.1)
+(setq-default line-spacing 0.3)
 
 ;; Mode
 (blink-cursor-mode nil)
