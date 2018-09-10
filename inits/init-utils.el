@@ -19,6 +19,13 @@
     (interactive)
     (my/template-word-func 's-upper-camel-case)))
 
+;; https://stackoverflow.com/questions/23378271/how-do-i-display-ansi-color-codes-in-emacs-for-any-mode
+(defun my/display-ansi-colors ()
+  (interactive)
+  (let ((inhibit-read-only t))
+    (ansi-color-apply-on-region (point-min) (point-max))))
+(add-to-list 'auto-mode-alist '("\\.log\\'" . my/display-ansi-colors))
+
 (require 'bind-key)
 (bind-keys*
   ("C-c c d" . dasherize-word)
