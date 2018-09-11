@@ -1,5 +1,5 @@
 (defun my/cheatsheet ()
-  "Display favorite key bindings."
+  "Display personal cheatsheet for key bindings."
   (interactive)
   (with-output-to-temp-buffer "*Cheatsheet*"
     (princ "-*- Cheatsheet -*-
@@ -16,9 +16,10 @@ C-x C--    `text-scale-adjust' (↓)
 C-x C-0    `text-scale-adjust' (reset)
 C-x SPC    `rectangle-mark-mode'
 C-c C-g    `vc-git-grep'
-C-x v =    `vc-diff' (git diff)
+C-x v =    `vc-diff'
 C-x v g    `vc-annotate' (git blame)
-C-x v l    `vc-print-log' (git log)
+C-x v l    `vc-print-log'
+C-x v u    `vc-revert'
 M-!        `shell-command'
 M-&        `async-shell-command'
 C-u M-!    `shell-command' (insert to buffer)
