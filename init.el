@@ -114,7 +114,8 @@
   (require 'init-neotree)
   (require 'init-emmet)
   (require 'init-which-key)
-  (require 'init-google))
+  (require 'init-google)
+  (require 'init-emojify))
   ;; Disable less used packages
   ;; (require 'init-java)
 
