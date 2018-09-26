@@ -1,5 +1,4 @@
 (use-package emojify
-  :config
-  (global-emojify-mode))
+  :hook (markdown-mode . emojify-mode))
 
 (provide 'init-emojify)
