@@ -115,7 +115,8 @@
   (require 'init-emmet)
   (require 'init-which-key)
   (require 'init-google)
-  (require 'init-emojify))
+  (require 'init-emojify)
+  (require 'init-super-save))
   ;; Disable less used packages
   ;; (require 'init-java)
 
