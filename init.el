@@ -6,6 +6,7 @@
 
 ;; Basic
 (setq auto-save-default nil)
+(setq create-lockfiles nil)
 (setq debug-on-error t)
 (setq indent-tabs-mode nil)
 (setq inhibit-startup-screen t)
