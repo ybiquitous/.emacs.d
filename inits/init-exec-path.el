@@ -1,9 +1,11 @@
-;; https://github.com/jwiegley/use-package#conditional-loading
 (use-package exec-path-from-shell
-  :if (memq window-system '(ns x))
+  :if window-system
   :config
-  (dolist (var '("HISTFILE" "HISTSIZE" "EDITOR" "NODE_PATH"))
-    (add-to-list 'exec-path-from-shell-variables var t ))
+  (exec-path-from-shell-copy-env "HISTFILE")
+  (exec-path-from-shell-copy-env "HISTSIZE")
+  (exec-path-from-shell-copy-env "EDITOR")
+  (exec-path-from-shell-copy-env "VISUAL")
+  (exec-path-from-shell-copy-env "NODE_PATH")
   (exec-path-from-shell-initialize))
 
 (provide 'init-exec-path)
