@@ -9,6 +9,7 @@
 (use-package flycheck-package
   :config
   (flycheck-package-setup)
+  (flycheck-add-mode 'css-stylelint 'web-mode)
   :custom
   (flycheck-disabled-checkers '(scss-lint ruby-reek)))
 
