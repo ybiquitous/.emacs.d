@@ -112,7 +112,6 @@
   (require 'init-dotenv)
   (require 'init-projectile)
   (require 'init-neotree)
-  (require 'init-treemacs)
   (require 'init-emmet)
   (require 'init-which-key)
   (require 'init-google)
