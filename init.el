@@ -91,7 +91,6 @@
   (require 'init-company)
   (require 'init-editorconfig)
   (require 'init-git)
-  (require 'init-avy)
   (require 'init-flyspell)
   (require 'init-flycheck)
   (require 'init-js-auto-format)
