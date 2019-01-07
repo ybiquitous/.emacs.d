@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/ea28c14da0faf75047165c10223635ba95566ad7/Global/Emacs.gitignore
+### https://raw.github.com/github/gitignore/9846160ebf3bf7507506246081c8071a7fe510cd/Global/Emacs.gitignore
 
 # -*- mode: gitignore; -*-
 *~
@@ -46,6 +46,8 @@ flycheck_*.el
 # directory configuration
 .dir-locals.el
 
+# network security
+/network-security.data
 
 # --- Custom ---
 !/.dir-locals.el
