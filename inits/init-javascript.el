@@ -2,6 +2,11 @@
 (setq js-indent-level tab-width)
 (setq js-switch-indent-offset tab-width)
 
+;; JSON support
+(define-derived-mode my-json-mode js-mode "JSON"
+  "A custom mode for JSON files.")
+(add-to-list 'auto-mode-alist '("\\.json\\'" . my-json-mode))
+
 (use-package js2-mode
   :mode ("\\.js\\'" "\\.mjs\\'" "\\.es6\\'")
   :interpreter "node"
