@@ -12,7 +12,6 @@
   (defun my/enable-jaf-as-prettier ()
     (setq-local js-auto-format-command "prettier")
     (setq-local js-auto-format-command-args "--write"))
-  (add-hook 'json-mode-hook #'my/enable-jaf-as-prettier)
   (add-hook 'css-mode-hook #'my/enable-jaf-as-prettier)
   (add-hook 'yaml-mode-hook #'my/enable-jaf-as-prettier)
 
