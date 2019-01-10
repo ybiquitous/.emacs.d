@@ -119,7 +119,8 @@
   (require 'init-highlight-indent-guides)
   (require 'init-feature-mode)
   (require 'init-read-only)
-  (require 'init-super-save))
+  (require 'init-super-save)
+  (require 'init-lsp))
   ;; Disable less used packages
   ;; (require 'init-java)
 

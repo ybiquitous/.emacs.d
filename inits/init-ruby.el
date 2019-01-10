@@ -22,11 +22,4 @@
 (use-package ruby-electric
   :hook ((ruby-mode enh-ruby-mode) . ruby-electric-mode))
 
-(require 'company)
-(use-package robe
-  :hook ((ruby-mode enh-ruby-mode) . robe-mode)
-  :config
-  (eval-after-load 'company
-    '(push 'company-robe company-backends)))
-
 (provide 'init-ruby)
