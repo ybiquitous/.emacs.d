@@ -1,9 +1,11 @@
-sudo: required
+dist: xenial
 
-before_install:
-  - sudo add-apt-repository ppa:kelleyk/emacs -y
-  - sudo apt-get update -q
-  - sudo apt-get install emacs25 -y
+addons:
+  apt:
+    sources:
+      - ppa:kelleyk/emacs
+    packages:
+      - emacs25
 
 script:
   - EMACS=emacs-25.3 ./test.sh
