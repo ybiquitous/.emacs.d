@@ -3,7 +3,7 @@ dist: xenial
 addons:
   apt:
     sources:
-      - ppa:kelleyk/emacs
+      - sourceline: "ppa:kelleyk/emacs"
     packages:
       - emacs25
 
