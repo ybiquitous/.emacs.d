@@ -117,6 +117,7 @@
   (require 'init-google)
   (require 'init-emojify)
   (require 'init-highlight-indent-guides)
+  (require 'init-feature-mode)
   (require 'init-super-save))
   ;; Disable less used packages
   ;; (require 'init-java)
