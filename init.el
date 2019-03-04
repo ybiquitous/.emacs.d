@@ -116,6 +116,7 @@
   (require 'init-which-key)
   (require 'init-google)
   (require 'init-emojify)
+  (require 'init-highlight-indent-guides)
   (require 'init-super-save))
   ;; Disable less used packages
   ;; (require 'init-java)
