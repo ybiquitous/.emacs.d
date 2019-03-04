@@ -1,5 +1,8 @@
 (use-package typescript-mode
-  :delight "TS")
+  :after (flycheck)
+  :delight "TS"
+  :config
+  (flycheck-add-mode 'javascript-eslint 'typescript-mode))
 
 (use-package tide
   :after (typescript-mode company flycheck)
@@ -15,5 +18,6 @@
 ;; Enable web-mode on TSX
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 (flycheck-add-mode 'typescript-tslint 'web-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 (provide 'init-typescript)
