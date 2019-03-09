@@ -5,19 +5,17 @@
   (flycheck-add-mode 'javascript-eslint 'typescript-mode))
 
 (use-package tide
-  :after (typescript-mode company flycheck)
-  :hook ((typescript-mode . tide-setup)
-         (typescript-mode . tide-hl-identifier-mode))
+  :after (typescript-mode)
   :config
-  (defun my/enable-tsx-on-web-mode ()
-    (when (string-equal "tsx" (file-name-extension buffer-file-name))
-      (tide-setup)
-      (tide-hl-identifier-mode)))
-  (add-hook 'web-mode-hook #'my/enable-tsx-on-web-mode))
+  (defun my/setup-tide ()
+    (tide-setup)
+    (tide-hl-identifier-mode)
+    (eldoc-mode))
+  (add-hook 'typescript-mode-hook #'my/setup-tide)
 
-;; Enable web-mode on TSX
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-(flycheck-add-mode 'typescript-tslint 'web-mode)
-(flycheck-add-mode 'javascript-eslint 'web-mode)
+  (defun my/setup-tide-on-tsx ()
+    (when (string-equal "tsx" (file-name-extension buffer-file-name))
+      (my/setup-tide)))
+  (add-hook 'find-file-hook #'my/setup-tide-on-tsx))
 
 (provide 'init-typescript)
