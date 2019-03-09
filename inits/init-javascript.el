@@ -2,12 +2,6 @@
 (setq js-indent-level tab-width)
 (setq js-switch-indent-offset tab-width)
 
-;; Force read-only under `node_modules/'
-(defun my/hook-under-node-modules ()
-  (when (string-match-p (regexp-quote "node_modules") default-directory)
-    (read-only-mode t)))
-(add-hook 'find-file-hook #'my/hook-under-node-modules)
-
 ;; JSON support
 (define-derived-mode my-json-mode js-mode "JSON"
   "A custom mode for JSON files.")

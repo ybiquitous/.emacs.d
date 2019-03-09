@@ -145,3 +145,11 @@
 (let ((env-file "~/.emacs-env.el"))
   (when (file-exists-p env-file)
     (load env-file)))
+
+(defun my/force-read-only-mode-under (dir)
+  "Force read-only-mode under the given directory."
+  (interactive "sDirectory? ")
+  (when (string-match-p (regexp-quote dir) default-directory)
+    (read-only-mode t)))
+(add-hook 'find-file-hook '(lambda () (my/force-read-only-mode-under "node_modules/")))
+(add-hook 'find-file-hook '(lambda () (my/force-read-only-mode-under "vendor/bundle/")))
