@@ -27,7 +27,4 @@
   :config
   (push 'company-tern company-backends))
 
-(use-package rjsx-mode
-  :mode ("components\\/.*\\.jsx?\\'" "\\.jsx\\'"))
-
 (provide 'init-javascript)
