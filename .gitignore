@@ -59,3 +59,4 @@ flycheck_*.el
 /emojis
 /.cache
 /transient
+/.lsp-session-*
