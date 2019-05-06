@@ -11,6 +11,6 @@
   (flycheck-package-setup)
   (flycheck-add-mode 'css-stylelint 'web-mode)
   :custom
-  (flycheck-disabled-checkers '(scss-lint ruby-reek)))
+  (flycheck-disabled-checkers '(scss-lint ruby-reek markdown-mdl)))
 
 (provide 'init-flycheck)
