@@ -53,6 +53,7 @@ flycheck_*.el
 !/.dir-locals.el
 /recentf
 /projectile-bookmarks.eld
+/projectile.cache
 /ido.last
 /custom.el
 /url
