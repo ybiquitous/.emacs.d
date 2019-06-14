@@ -5,30 +5,25 @@
   :custom
   (markdown-command "github-markup-custom")
   (markdown-command-needs-filename t)
+  (markdown-spaces-after-code-fence 0)
   (markdown-content-type "application/xhtml+xml")
   (markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"
-                        "http://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github.min.css"))
+                        "https://cdn.jsdelivr.net/npm/highlightjs/styles/github.min.css"))
   (markdown-xhtml-header-content "
-<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
 <style>
 body {
-  box-sizing: border-box;
-  max-width: 740px;
+  max-width: 50rem;
   width: 100%;
-  margin: 40px auto;
-  padding: 0 10px;
+  margin: 3rem auto;
+  padding: 0 0.5rem;
 }
-</style>
-<script src='http://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js'></script>
+</style>")
+  (markdown-xhtml-body-epilogue "
+<script src='https://cdn.jsdelivr.net/npm/highlightjs'></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('markdown-body');
-  document.querySelectorAll('pre[lang] > code').forEach((code) => {
-    code.classList.add(code.parentElement.lang);
-    hljs.highlightBlock(code);
-  });
-});
-</script>
-"))
+  hljs.initHighlightingOnLoad();
+</script>"))
 
 (provide 'init-markdown)
