@@ -23,7 +23,10 @@ body {
 <script src='https://cdn.jsdelivr.net/npm/highlightjs'></script>
 <script>
   document.body.classList.add('markdown-body');
-  hljs.initHighlightingOnLoad();
+  document.querySelectorAll('pre[lang] > code').forEach(code => {
+    code.classList.add(code.parentElement.lang);
+    hljs.highlightBlock(code);
+  });
 </script>"))
 
 (provide 'init-markdown)
