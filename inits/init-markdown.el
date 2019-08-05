@@ -5,6 +5,7 @@
   :custom
   (markdown-command "github-markup-custom")
   (markdown-command-needs-filename t)
-  (markdown-spaces-after-code-fence 0))
+  (markdown-spaces-after-code-fence 0)
+  (whitespace-line-column 1000))
 
 (provide 'init-markdown)
