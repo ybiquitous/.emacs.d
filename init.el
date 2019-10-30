@@ -19,7 +19,7 @@
 (setq select-enable-clipboard t)
 (setq show-trailing-whitespace t)
 (setq standard-indent 2)
-(setq tab-width 2)
+(setq-default tab-width 4)
 (setq-default line-spacing 0.3)
 
 ;; Mode
