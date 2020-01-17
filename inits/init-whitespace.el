@@ -4,7 +4,7 @@
                                      (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
 (setq whitespace-space-regexp "\\(\\u3000+\\)")
 (setq whitespace-line-column 120)
-(setq whitespace-style '(face tabs spaces trailing lines-tail space-mark tab-mark))
+(setq whitespace-style '(face spaces trailing lines-tail space-mark tab-mark))
 (global-whitespace-mode t)
 
 (provide 'init-whitespace)
