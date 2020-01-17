@@ -1,5 +1,5 @@
 (defun my/force-read-only-files ()
-  (let* ((candidates '("/node_modules/" "/vendor/bundle/" "package-lock.json" "yarn.lock" "Gemfile.lock"))
+  (let* ((candidates '("/.emacs.d/elpa/" "/node_modules/" "/vendor/bundle/" "package-lock.json" "yarn.lock" "Gemfile.lock"))
          (file-pattern (mapconcat 'regexp-quote candidates "\\|")))
     (when (string-match-p file-pattern buffer-file-name)
       (view-mode))))
