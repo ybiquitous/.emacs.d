@@ -13,6 +13,7 @@
           "Gemfile\\'"
           "Guardfile\\'"
           "Rakefile\\'"
+          "Steepfile\\'"
           "Vagrantfile\\'")
   :custom
   (enh-ruby-add-encoding-comment-on-save nil)
