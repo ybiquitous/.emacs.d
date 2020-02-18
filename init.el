@@ -105,6 +105,7 @@
   (require 'init-ruby)
   (require 'init-slim)
   (require 'init-docker)
+  (require 'init-go)
   (require 'init-perl)
   (require 'init-shell)
   (require 'init-shellscript)
