@@ -58,10 +58,8 @@
 
 ;; MELPA (https://github.com/melpa/melpa)
 (require 'package)
-(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
-                 (not (gnutls-available-p))))
-        (protocol (if no-ssl "http" "https")))
-  (add-to-list 'package-archives (cons "melpa" (concat protocol "://melpa.org/packages/")) t))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
