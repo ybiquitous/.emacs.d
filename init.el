@@ -58,6 +58,19 @@
 
 ;; MELPA (https://github.com/melpa/melpa)
 (require 'package)
+
+;; HACK: Emacs 27.1 fails to initialize.
+;; ---
+;; Failed to verify signature spinner-1.7.3.el.sig:
+;; No public key for 066DAFCB81E42C40 created at 2019-09-22T02:54:00+0900 using RSA
+;; Command output:
+;; gpg: keyblock resource '~/.emacs.d/elpa/gnupg/pubring.kbx': No such file or directory
+;; gpg: Signature made Sun Sep 22 02:54:00 2019 JST
+;; gpg:                using RSA key C433554766D3DDC64221BFAA066DAFCB81E42C40
+;; gpg: Can't check signature: No public key
+;; ---
+(setq package-check-signature nil)
+
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (when (< emacs-major-version 24)
