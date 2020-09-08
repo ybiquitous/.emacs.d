@@ -1,6 +1,4 @@
 (use-package flycheck
-  :config
-  (global-flycheck-mode)
   :custom
   (flycheck-temp-prefix ".flycheck"))
 
@@ -8,9 +6,6 @@
 
 (use-package flycheck-package
   :config
-  (flycheck-package-setup)
-  (flycheck-add-mode 'css-stylelint 'web-mode)
-  :custom
-  (flycheck-disabled-checkers '(scss-lint ruby-lint ruby-reek markdown-mdl)))
+  (flycheck-package-setup))
 
 (provide 'init-flycheck)
