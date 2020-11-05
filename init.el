@@ -99,7 +99,6 @@
   (require 'init-dired)
   (require 'init-whitespace)
   (require 'init-ido)
-  (require 'init-yasnippet)
   (require 'init-company)
   (require 'init-editorconfig)
   (require 'init-git)
