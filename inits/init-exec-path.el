@@ -7,7 +7,6 @@
   (exec-path-from-shell-copy-env "HISTSIZE")
   (exec-path-from-shell-copy-env "EDITOR")
   (exec-path-from-shell-copy-env "VISUAL")
-  (exec-path-from-shell-copy-env "NODE_PATH")
   (exec-path-from-shell-initialize))
 
 (provide 'init-exec-path)
