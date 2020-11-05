@@ -1,5 +1,7 @@
 (use-package exec-path-from-shell
   :if window-system
+  :custom
+  (exec-path-from-shell-arguments '("-l"))
   :config
   (exec-path-from-shell-copy-env "HISTFILE")
   (exec-path-from-shell-copy-env "HISTSIZE")
