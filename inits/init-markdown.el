@@ -39,6 +39,7 @@
   (markdown-xhtml-body-epilogue "</div>")
   (markdown-command-needs-filename t)
   (markdown-spaces-after-code-fence 0)
+  (markdown-fontify-code-blocks-natively t)
   (whitespace-line-column 1000))
 
 (provide 'init-markdown)
