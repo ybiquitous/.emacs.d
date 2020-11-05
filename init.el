@@ -126,7 +126,6 @@
   (require 'init-neotree)
   (require 'init-emmet)
   (require 'init-which-key)
-  (require 'init-google)
   (require 'init-emojify)
   (require 'init-highlight-indent-guides)
   (require 'init-feature-mode)
