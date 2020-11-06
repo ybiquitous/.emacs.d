@@ -28,7 +28,6 @@ C-M-s      `isearch-forward-regexp'
 M-s w      `isearch-forward-word'
 ")))
 
-;; use-package installs bind-key automatically
 (require 'bind-key)
 (bind-keys*
   ("C-?"     . help-command)
