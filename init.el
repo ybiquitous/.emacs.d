@@ -113,7 +113,6 @@
   (require 'init-hcl)
   (require 'init-dotenv)
   (require 'init-projectile)
-  (require 'init-neotree)
   (require 'init-which-key)
   (require 'init-emojify)
   (require 'init-highlight-indent-guides)
