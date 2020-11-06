@@ -1,10 +1,10 @@
 (use-package exec-path-from-shell
   :if window-system
   :config
-  (exec-path-from-shell-copy-env "HISTFILE")
-  (exec-path-from-shell-copy-env "HISTSIZE")
-  (exec-path-from-shell-copy-env "EDITOR")
-  (exec-path-from-shell-copy-env "VISUAL")
+  (add-to-list 'exec-path-from-shell-variables "HISTFILE")
+  (add-to-list 'exec-path-from-shell-variables "HISTSIZE")
+  (add-to-list 'exec-path-from-shell-variables "EDITOR")
+  (add-to-list 'exec-path-from-shell-variables "VISUAL")
   (exec-path-from-shell-initialize))
 
 (provide 'init-exec-path)
