@@ -43,7 +43,6 @@
 ;; Face
 (set-face-background 'default "black")
 (set-face-foreground 'default "white")
-(set-face-font 'default "JetBrains Mono 18")
 
 ;; Prompt
 (fset 'yes-or-no-p 'y-or-n-p)
