@@ -55,7 +55,6 @@ flycheck_*.el
 /projectile-bookmarks.eld
 /projectile.cache
 /ido.last
-/custom.el
 /url
 /emojis
 /.cache
