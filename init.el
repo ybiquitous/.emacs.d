@@ -137,12 +137,7 @@
 (when (eq system-type 'windows-nt)
   (require 'init-windows))
 
-;; http://extra-vision.blogspot.com/2016/10/emacs25-package-selected-packages.html
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+;; Environment-specific customization
+(setq custom-file "~/.emacs-env.el")
 (when (file-exists-p custom-file)
   (load custom-file))
-
-;; Environment-specific customization
-(let ((env-file "~/.emacs-env.el"))
-  (when (file-exists-p env-file)
-    (load env-file)))
