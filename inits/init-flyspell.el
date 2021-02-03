@@ -1,6 +1,7 @@
-(require 'flyspell)
-
-(add-hook 'text-mode-hook #'flyspell-mode)
-(add-hook 'prog-mode-hook #'flyspell-prog-mode)
+(if (executable-find "ispell")
+  (progn
+    (require 'flyspell)
+    (add-hook 'text-mode-hook #'flyspell-mode)
+    (add-hook 'prog-mode-hook #'flyspell-prog-mode)))
 
 (provide 'init-flyspell)
