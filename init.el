@@ -107,7 +107,6 @@
   (require 'init-perl)
   (require 'init-prettier)
   (require 'init-projectile)
-  (require 'init-read-only)
   (require 'init-ruby)
   (require 'init-shell)
   (require 'init-shellscript)
