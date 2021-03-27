@@ -14,30 +14,10 @@
   (markdown-xhtml-header-content "
 <style>
   body {
-    padding: 1rem 3rem;
-  }
-
-  @media only screen {
-    body {
-      border: 1px solid #ddd;
-      margin: 1rem auto;
-      max-width: 45rem;
-      padding: 3rem;
-    }
-  }
-
-  .markdown-body h1,
-  .markdown-body h2,
-  .markdown-body h3,
-  .markdown-body h4,
-  .markdown-body h5,
-  .markdown-body h6,
-  .markdown-body h6,
-  .markdown-body strong {
-    font-weight: 700;
+    margin: 2rem auto;
+    max-width: 50rem;
   }
 </style>
-
 <script src=\"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js\"></script>
 <script>hljs.initHighlightingOnLoad();</script>")
   (markdown-xhtml-body-preamble "<div class=\"markdown-body\">")
