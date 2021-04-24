@@ -14,6 +14,7 @@
 (setq initial-scratch-message nil)
 (setq load-prefer-newer t)
 (setq make-backup-files nil)
+(setq ns-pop-up-frames nil)
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 (setq select-enable-clipboard t)
