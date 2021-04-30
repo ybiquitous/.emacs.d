@@ -41,4 +41,6 @@
 (add-hook 'ruby-mode-hook #'hs-minor-mode)
 (add-hook 'enh-ruby-mode-hook #'hs-minor-mode)
 
+(use-package rbs-mode)
+
 (provide 'init-ruby)
