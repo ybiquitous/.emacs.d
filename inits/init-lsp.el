@@ -1,5 +1,7 @@
 (use-package lsp-mode
-  :commands lsp)
+  :commands lsp
+  :custom
+  (lsp-disabled-clients '(deno-ls)))
 
 (use-package lsp-ui
   :commands lsp-ui-mode)
