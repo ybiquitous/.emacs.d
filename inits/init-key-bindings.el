@@ -11,6 +11,7 @@ C-? b      `describe-bindings'
 C-? f      `describe-function'
 C-? k      `describe-key'
 C-q        `quoted-insert' (e.g. `C-q TAB')
+C-x 8      `insert-char' (e.g. emoji `😇')
 C-x C-+    `text-scale-adjust' (↑)
 C-x C--    `text-scale-adjust' (↓)
 C-x C-0    `text-scale-adjust' (reset)
