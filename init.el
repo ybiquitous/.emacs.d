@@ -90,7 +90,6 @@
   (require 'init-docker)
   (require 'init-dotenv)
   (require 'init-editorconfig)
-  (require 'init-emojify)
   (require 'init-exec-path)
   (require 'init-feature-mode)
   (require 'init-flycheck)

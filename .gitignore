@@ -56,7 +56,6 @@ flycheck_*.el
 /projectile.cache
 /ido.last
 /url
-/emojis
 /.cache
 /transient
 /.lsp-session-*
