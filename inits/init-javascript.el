@@ -8,11 +8,6 @@
 ;; Override 'js-find-symbol
 (define-key js-mode-map (kbd "M-.") #'xref-find-definitions)
 
-;; JSON support
-(define-derived-mode my-json-mode js-mode "JSON"
-  "A custom mode for JSON files.")
-(add-to-list 'auto-mode-alist '("\\.json\\'" . my-json-mode))
-
 (use-package add-node-modules-path
   :hook (prog-mode text-mode)
   :custom
