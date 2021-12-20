@@ -110,6 +110,7 @@
   (require 'init-prettier)
   (require 'init-projectile)
   (require 'init-ruby)
+  (require 'init-rust)
   (require 'init-shell)
   (require 'init-shellscript)
   (require 'init-slim)
