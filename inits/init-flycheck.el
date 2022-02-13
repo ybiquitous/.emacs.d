@@ -1,4 +1,5 @@
 (use-package flycheck
+  :hook ((gfm-mode git-commit-mode) . flycheck-mode)
   :custom
   (flycheck-temp-prefix ".flycheck"))
 
