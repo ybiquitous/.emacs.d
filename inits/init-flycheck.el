@@ -12,4 +12,9 @@
   :config
   (flycheck-package-setup))
 
+(use-package flycheck-grammarly
+  :custom
+  (flycheck-grammarly-active-modes '(text-mode latex-mode org-mode markdown-mode gfm-mode git-commit-mode))
+  (flycheck-grammarly-check-time 0.5))
+
 (provide 'init-flycheck)
