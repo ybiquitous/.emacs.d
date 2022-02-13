@@ -59,3 +59,5 @@ flycheck_*.el
 /.cache
 /transient
 /.lsp-session-*
+/eln-cache/
+/request/
