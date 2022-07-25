@@ -1,6 +1,7 @@
 (require 'ido)
 (ido-mode t)
 (ido-everywhere t)
+(setq ido-case-fold t)
 (setq ido-enable-flex-matching t)
 
 (use-package ido-vertical-mode
