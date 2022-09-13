@@ -9,8 +9,15 @@
 (define-key js-mode-map (kbd "M-.") #'xref-find-definitions)
 
 (use-package add-node-modules-path
-  :hook (prog-mode text-mode)
   :custom
-  (add-node-modules-path-debug t))
+  (add-node-modules-path-debug t)
+  :config
+  (eval-after-load 'js-mode '(add-hook 'js-mode-hook #'add-node-modules-path))
+  (eval-after-load 'json-mode '(add-hook 'json-mode-hook #'add-node-modules-path))
+  (eval-after-load 'typescript-mode '(add-hook 'typescript-mode-hook #'add-node-modules-path))
+  (eval-after-load 'css-mode '(add-hook 'css-mode-hook #'add-node-modules-path))
+  (eval-after-load 'web-mode '(add-hook 'web-mode-hook #'add-node-modules-path))
+  (eval-after-load 'markdown-mode '(add-hook 'markdown-mode-hook #'add-node-modules-path))
+  (eval-after-load 'yaml-mode '(add-hook 'yaml-mode-hook #'add-node-modules-path)))
 
 (provide 'init-javascript)
