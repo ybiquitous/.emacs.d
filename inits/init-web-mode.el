@@ -1,7 +1,4 @@
 (use-package web-mode
-  :mode ("\\.html\\'" "\\html.erb\\'" "\\.jsx\\'" "\\.tsx\\'")
-  :config
-  (flycheck-add-mode 'typescript-tslint 'web-mode)
-  (flycheck-add-mode 'javascript-eslint 'web-mode))
+  :mode ("\\.html\\'" "\\html.erb\\'" "\\.jsx\\'" "\\.tsx\\'"))
 
 (provide 'init-web-mode)
