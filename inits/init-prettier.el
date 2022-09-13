@@ -1,12 +1,14 @@
 (defun my/prettier ()
   (interactive)
-  (let* ((prettier-command
-           (format "%s --write %s"
-             (shell-quote-argument (executable-find "prettier"))
-             (shell-quote-argument (expand-file-name buffer-file-name)))))
-    (shell-command prettier-command)
-    (revert-buffer t t t)
-    (if (fboundp 'flycheck-buffer) (flycheck-buffer))))
+  (let* ((prettier-executable (executable-find "prettier")))
+    (if prettier-executable
+      (progn
+        (shell-command
+          (format "%s --write %s"
+            (shell-quote-argument prettier-executable)
+            (shell-quote-argument (expand-file-name buffer-file-name))))
+        (revert-buffer t t t))
+      (message "Prettier not found"))))
 
 (require 'bind-key)
 (bind-key "C-c m p" 'my/prettier)
