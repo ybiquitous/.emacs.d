@@ -8,6 +8,9 @@
 ;; Override 'js-find-symbol
 (define-key js-mode-map (kbd "M-.") #'xref-find-definitions)
 
+;; https://www.emacswiki.org/emacs/HideShow
+(add-hook 'js-mode-hook #'hs-minor-mode)
+
 (use-package add-node-modules-path
   :custom
   (add-node-modules-path-debug t)
