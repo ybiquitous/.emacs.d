@@ -116,6 +116,7 @@
   (require 'init-slim)
   (require 'init-smart-apostrophe-mode)
   (require 'init-super-save)
+  (require 'init-tree-sitter)
   (require 'init-typescript)
   (require 'init-utils)
   (require 'init-web-mode)
