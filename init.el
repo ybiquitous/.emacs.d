@@ -9,6 +9,8 @@
 (setq confirm-kill-emacs 'yes-or-no-p)
 (setq create-lockfiles nil)
 (setq debug-on-error t)
+(setq display-time-default-load-average nil)
+(setq display-time-format "%H:%M%p")
 (setq indent-tabs-mode nil)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
@@ -27,6 +29,7 @@
 ;; Mode
 (blink-cursor-mode nil)
 (column-number-mode t)
+(display-time-mode t)
 (electric-pair-mode t)
 (global-font-lock-mode t)
 (global-hl-line-mode t)
