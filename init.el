@@ -10,7 +10,7 @@
 (setq create-lockfiles nil)
 (setq debug-on-error t)
 (setq display-time-default-load-average nil)
-(setq display-time-format "%H:%M%p")
+(setq display-time-format "%k:%M%p")
 (setq indent-tabs-mode nil)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
