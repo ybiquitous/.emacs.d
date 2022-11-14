@@ -15,7 +15,7 @@
   :custom
   (add-node-modules-path-debug t)
   ;; HACK: https://github.com/codesuki/add-node-modules-path/issues/23
-  (add-node-modules-path-command "npm exec --package=npm@8 -- npm bin"))
+  (add-node-modules-path-command "echo \"$(npm root)/.bin\""))
 
 (add-hook 'js-mode-hook #'add-node-modules-path)
 (eval-after-load 'json-mode '(add-hook 'json-mode-hook #'add-node-modules-path))
