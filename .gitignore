@@ -54,6 +54,7 @@ flycheck_*.el
 /recentf
 /projectile-bookmarks.eld
 /projectile.cache
+/projects
 /ido.last
 /url
 /.cache
