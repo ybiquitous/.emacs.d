@@ -9,7 +9,7 @@
   (add-hook 'markdown-mode-hook #'my/customize-markdown-mode)
   :custom
   (markdown-command "cmark-gfm -e autolink -e footnotes -e strikethrough -e table -e tagfilter -e tasklist --unsafe")
-  (markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css"
+  (markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown-light.css"
                         "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github.min.css"))
   (markdown-xhtml-header-content "
 <style>
