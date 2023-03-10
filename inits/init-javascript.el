@@ -15,7 +15,9 @@
   :custom
   (add-node-modules-path-debug t)
   ;; HACK: https://github.com/codesuki/add-node-modules-path/issues/23
-  (add-node-modules-path-command "echo \"$(npm root)/.bin\""))
+  (add-node-modules-path-command "echo \"$(npm root)/.bin\"")
+  :init
+  (add-to-list 'warning-suppress-log-types '(add-node-modules-path)))
 
 (add-hook 'js-mode-hook #'add-node-modules-path)
 (eval-after-load 'json-mode '(add-hook 'json-mode-hook #'add-node-modules-path))
