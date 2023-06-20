@@ -19,7 +19,7 @@
   }
 </style>
 <script src=\"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js\"></script>
-<script>hljs.initHighlightingOnLoad();</script>")
+<script>hljs.highlightAll();</script>")
   (markdown-xhtml-body-preamble "<div class=\"markdown-body\">")
   (markdown-xhtml-body-epilogue "</div>")
   (markdown-command-needs-filename t)
