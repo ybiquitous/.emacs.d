@@ -5,6 +5,7 @@
   :interpreter "ruby"
   :mode ("\\.rb\\'"
           "\\.gemspec\\'"
+          "\\.irbrc\\'"
           "\\.jb\\'"
           "\\.jbuilder\\'"
           "\\.rake\\'"
