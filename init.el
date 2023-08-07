@@ -24,7 +24,7 @@
 (setq standard-indent 2)
 (setq vc-follow-symlinks nil)
 (setq-default tab-width 4)
-(setq-default line-spacing 0.3)
+(setq-default line-spacing 0.1)
 
 ;; Mode
 (blink-cursor-mode nil)
