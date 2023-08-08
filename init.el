@@ -95,7 +95,6 @@
   (require 'init-editorconfig)
   (require 'init-exec-path)
   (require 'init-feature-mode)
-  (require 'init-flycheck)
   (require 'init-flyspell)
   (require 'init-git)
   (require 'init-go)
