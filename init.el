@@ -100,7 +100,6 @@
   (require 'init-exec-path)
   (require 'init-flyspell)
   (require 'init-git)
-  (require 'init-go)
   (require 'init-hcl)
   (require 'init-highlight-indent-guides)
   (require 'init-highlight-symbol)
