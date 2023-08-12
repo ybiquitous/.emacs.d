@@ -95,7 +95,6 @@
   (require 'init-dash)
   (require 'init-desktop)
   (require 'init-dired)
-  (require 'init-docker)
   (require 'init-dotenv)
   (require 'init-editorconfig)
   (require 'init-exec-path)
