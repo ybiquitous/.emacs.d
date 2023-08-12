@@ -131,8 +131,6 @@
   (require 'init-whitespace)
   (require 'init-xml)
   (require 'init-yaml))
-  ;; Disable less used packages
-  ;; (require 'init-java)
 
 ;; macOS
 (when (eq system-type 'darwin)
