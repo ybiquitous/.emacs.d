@@ -82,6 +82,9 @@
   (require 'use-package)
   (setq use-package-always-ensure t)
 
+  ;; Ensure certain executables are available on your system.
+  (use-package use-package-ensure-system-package)
+
   ;; https://github.com/jwiegley/use-package#diminishing-and-delighting-minor-modes
   (use-package delight)
 
@@ -89,6 +92,7 @@
   (add-to-list 'load-path (expand-file-name "inits" user-emacs-directory))
   (require 'init-company)
   (require 'init-css)
+  (require 'init-dash)
   (require 'init-desktop)
   (require 'init-dired)
   (require 'init-docker)
@@ -137,8 +141,7 @@
 
 ;; macOS
 (when (eq system-type 'darwin)
-  (require 'init-mac)
-  (require 'init-dash))
+  (require 'init-mac))
 
 ;; Windows
 (when (eq system-type 'windows-nt)
