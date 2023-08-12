@@ -63,3 +63,4 @@ flycheck_*.el
 /eln-cache/
 /request/
 /tree-sitter/
+/multisession/
