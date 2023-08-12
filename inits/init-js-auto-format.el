@@ -4,11 +4,6 @@
     (setq-local js-auto-format-command-args (concat js-auto-format-command-args " --no-ignore")))
   (add-hook 'js-mode-hook #'my/enable-jaf-on-js-mode)
 
-  (defun my/enable-jaf-on-typescript-mode ()
-    (setq-local js-auto-format-command "tslint")
-    (setq-local js-auto-format-command-args "--fix"))
-  (add-hook 'typescript-mode-hook #'my/enable-jaf-on-typescript-mode)
-
   (defun my/enable-jaf-as-prettier ()
     (setq-local js-auto-format-command "prettier")
     (setq-local js-auto-format-command-args "--write"))
