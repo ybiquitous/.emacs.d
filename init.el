@@ -37,6 +37,7 @@
 (line-number-mode t)
 (recentf-mode t)
 (show-paren-mode t)
+(tab-bar-mode t)
 (transient-mark-mode t)
 
 ;; GUI
