@@ -119,6 +119,7 @@
   (require 'init-projectile)
   (require 'init-ruby)
   (require 'init-rust)
+  (require 'init-server)
   (require 'init-shell)
   (require 'init-shellscript)
   (require 'init-smart-apostrophe-mode)
@@ -133,11 +134,6 @@
   (require 'init-yaml))
   ;; Disable less used packages
   ;; (require 'init-java)
-
-;; emacsclient
-(require 'server)
-(unless (server-running-p)
-  (server-start))
 
 ;; macOS
 (when (eq system-type 'darwin)
