@@ -1,11 +1,12 @@
-(require 'ido)
-(ido-mode t)
-(ido-everywhere t)
-(setq ido-case-fold t)
-(setq ido-enable-flex-matching t)
+(use-package ido
+  :custom
+  (ido-case-fold t)
+  (ido-enable-flex-matching t)
+  (ido-everywhere t)
+  (ido-mode 'both))
 
 (use-package ido-vertical-mode
-  :config
+  :custom
   (ido-vertical-mode t))
 
 (provide 'init-ido)
