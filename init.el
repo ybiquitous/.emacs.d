@@ -117,7 +117,6 @@
   (require 'init-rust)
   (require 'init-shell)
   (require 'init-shellscript)
-  (require 'init-slim)
   (require 'init-smart-apostrophe-mode)
   (require 'init-super-save)
   (require 'init-tree-sitter)
