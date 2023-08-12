@@ -99,7 +99,6 @@
   (require 'init-dotenv)
   (require 'init-editorconfig)
   (require 'init-exec-path)
-  (require 'init-feature-mode)
   (require 'init-flyspell)
   (require 'init-git)
   (require 'init-go)
