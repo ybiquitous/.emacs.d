@@ -108,7 +108,6 @@
   (require 'init-ido)
   (require 'init-javascript)
   (require 'init-js-auto-format)
-  (require 'init-json)
   (require 'init-key-bindings)
   (require 'init-ligature)
   (require 'init-lsp)
