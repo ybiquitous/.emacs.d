@@ -1,6 +1,7 @@
 (use-package highlight-indent-guides
-  :hook ((ruby-mode enh-ruby-mode json-mode yaml-mode web-mode slim-mode css-mode) . highlight-indent-guides-mode)
+  :hook ((prog-mode yaml-ts-mode) . highlight-indent-guides-mode)
   :custom
+  (highlight-indent-guides-auto-character-face-perc 80)
   (highlight-indent-guides-method 'character))
 
 (provide 'init-highlight-indent-guides)
