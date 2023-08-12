@@ -62,3 +62,4 @@ flycheck_*.el
 /.lsp-session-*
 /eln-cache/
 /request/
+/tree-sitter/
