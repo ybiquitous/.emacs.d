@@ -101,6 +101,7 @@
   (require 'init-flyspell)
   (require 'init-git)
   (require 'init-hcl)
+  (require 'init-hideshow)
   (require 'init-highlight-indent-guides)
   (require 'init-highlight-symbol)
   (require 'init-ido)

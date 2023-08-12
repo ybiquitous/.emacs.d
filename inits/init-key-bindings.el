@@ -34,7 +34,6 @@ M-s w      `isearch-forward-word'
   ("C-?"     . help-command)
   ("C-h"     . delete-backward-char)
   ("C-x C-q" . view-mode)
-  ("C-c C-:" . hs-toggle-hiding)
   ("C-c C-g" . vc-git-grep)
   ("C-c C-k" . kill-buffer-and-window)
   ("C-c C-v" . browse-url-of-buffer)
