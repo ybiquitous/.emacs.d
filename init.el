@@ -126,8 +126,7 @@
   (require 'init-web-mode)
   (require 'init-which-key)
   (require 'init-whitespace)
-  (require 'init-xml)
-  (require 'init-yaml))
+  (require 'init-xml))
 
 ;; macOS
 (when (eq system-type 'darwin)
