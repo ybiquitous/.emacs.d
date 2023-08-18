@@ -19,6 +19,6 @@
         (setq-local js-auto-format-command "rubocop")
         (setq-local js-auto-format-command-args "--auto-correct --format emacs"))))
   (add-hook 'ruby-mode-hook #'my/enable-jaf-on-ruby-mode)
-  (add-hook 'enh-ruby-mode-hook #'my/enable-jaf-on-ruby-mode))
+  (add-hook 'ruby-ts-mode-hook #'my/enable-jaf-on-ruby-mode))
 
 (provide 'init-js-auto-format)
