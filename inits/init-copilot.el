@@ -7,7 +7,7 @@
     (shell-command (format "git clone --quiet '%s' '%s'" repo-url package-dir))))
 
 (use-package copilot
-  :load-path (lambda () (expand-file-name "git-packages/copilot.el" user-emacs-directory))
+  :load-path "git-packages/copilot.el"
   ;; :hook
   ;; (emacs-lisp-mode . copilot-mode)
   :bind (:map copilot-completion-map
