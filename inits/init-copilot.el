@@ -7,7 +7,7 @@
     (shell-command (format "git clone '%s' '%s'" repo-url package-dir))))
 
 (use-package copilot
-  :if window-system ;; HACK: Avoid CI failure.
+  :after (:all editorconfig s)
   :load-path "git-packages/copilot.el/"
   ;; :hook
   ;; (emacs-lisp-mode . copilot-mode)
