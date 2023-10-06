@@ -16,7 +16,4 @@
           ("C-TAB" . 'copilot-accept-completion-by-word)
           ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
-(with-eval-after-load 'copilot-mode
-  (copilot-login))
-
 (provide 'init-copilot)
