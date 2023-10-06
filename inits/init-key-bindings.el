@@ -36,7 +36,7 @@ M-s w      `isearch-forward-word'
   ("C-x C-q" . view-mode)
   ("C-c C-g" . vc-git-grep)
   ("C-c C-k" . kill-buffer-and-window)
-  ("C-c C-r" . revert-buffer)
+  ("C-c C-r" . revert-buffer-quick)
   ("C-c C-v" . browse-url-of-buffer)
   ("C-c M-r" . restart-emacs)
   ("C-c v"   . browse-url-at-point)
