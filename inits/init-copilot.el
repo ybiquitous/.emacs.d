@@ -5,14 +5,16 @@
   (if (file-directory-p package-dir)
     (shell-command (format "git -C '%s' pull --quiet" package-dir))
     (shell-command (format "git clone --quiet '%s' '%s'" repo-url package-dir)))
-  (use-package copilot
-    :load-path "git-packages/copilot.el/"
-    ;; :hook
-    ;; (emacs-lisp-mode . copilot-mode)
-    :bind (:map copilot-completion-map
-            ("<tab>" . 'copilot-accept-completion)
-            ("TAB" . 'copilot-accept-completion)
-            ("C-TAB" . 'copilot-accept-completion-by-word)
-            ("C-<tab>" . 'copilot-accept-completion-by-word))))
+  (shell-command (format "ls -l '%s'" package-dir)))
+
+(use-package copilot
+  :load-path "git-packages/copilot.el/"
+  ;; :hook
+  ;; (emacs-lisp-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+          ("<tab>" . 'copilot-accept-completion)
+          ("TAB" . 'copilot-accept-completion)
+          ("C-TAB" . 'copilot-accept-completion-by-word)
+          ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 (provide 'init-copilot)
