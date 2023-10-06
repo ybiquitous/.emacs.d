@@ -8,6 +8,7 @@
 
 (use-package copilot
   :load-path "git-packages/copilot.el"
+  :ensure nil
   ;; :hook
   ;; (emacs-lisp-mode . copilot-mode)
   :bind (:map copilot-completion-map
