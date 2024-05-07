@@ -8,7 +8,7 @@
 
 (use-package copilot
   :after (:all editorconfig s)
-  :load-path "git-packages/copilot.el/"
+  :load-path (lambda () "git-packages/copilot.el/")
   ;; :hook
   ;; (emacs-lisp-mode . copilot-mode)
   :bind (:map copilot-completion-map
