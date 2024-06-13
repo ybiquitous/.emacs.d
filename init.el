@@ -100,6 +100,7 @@
   (require 'init-dotenv)
   (require 'init-editorconfig)
   (require 'init-exec-path)
+  (require 'init-flymake)
   (require 'init-flyspell)
   (require 'init-formatter)
   (require 'init-git)
