@@ -115,7 +115,6 @@
   (require 'init-lsp)
   (require 'init-markdown)
   (require 'init-perl)
-  (require 'init-projectile)
   (require 'init-ruby)
   (require 'init-rust)
   (require 'init-server)
