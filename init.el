@@ -61,6 +61,17 @@
   '((:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))
      " @ Emacs " emacs-version))
 
+
+;; Utilities
+(defun my/download-github-package (repo-url)
+  "Download GitHub package from REPO-URL."
+  (let* ((package-name (car (last (split-string repo-url "/"))))
+          (package-dir (expand-file-name (format "git-packages/%s" package-name) user-emacs-directory)))
+  (message "Downloading '%s' to '%s' ..." repo-url package-dir)
+  (if (file-directory-p package-dir)
+    (shell-command (format "git -C '%s' pull" package-dir))
+    (shell-command (format "git clone '%s' '%s'" repo-url package-dir)))))
+
 ;; MELPA (https://github.com/melpa/melpa)
 (require 'package)
 (setq package-install-upgrade-built-in t)
