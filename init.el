@@ -107,6 +107,7 @@
   (require 'init-dired)
   (require 'init-dotenv)
   (require 'init-editorconfig)
+  (require 'init-eglot)
   (require 'init-exec-path)
   (require 'init-flymake)
   (require 'init-flyspell)
