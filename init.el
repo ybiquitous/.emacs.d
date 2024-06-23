@@ -67,7 +67,7 @@
     (message "Downloading '%s' to '%s' ..." repo-url package-dir)
     (if (file-directory-p package-dir)
       (shell-command (format "git -C '%s' pull" package-dir))
-      (shell-command (format "git clone '%s' '%s'" repo-url package-dir)))))
+      (shell-command (format "git clone --depth=1 '%s' '%s'" repo-url package-dir)))))
 
 ;; MELPA (https://github.com/melpa/melpa)
 (require 'package)
