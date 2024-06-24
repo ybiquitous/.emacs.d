@@ -18,4 +18,11 @@
        ruby-move-to-block
        nil)))
 
+(my/download-github-package "https://github.com/sheijk/hideshowvis")
+(use-package hideshowvis
+  :load-path (lambda () "git-packages/hideshowvis")
+  :hook (prog-mode . hideshowvis-enable)
+  :config
+  (hideshowvis-symbols))
+
 (provide 'init-hideshow)
