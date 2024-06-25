@@ -5,7 +5,8 @@
 
 (use-package flymake-eslint)
 
-(my/download-github-package "https://github.com/orzechowskid/flymake-stylelint")
+;; TODO: https://github.com/orzechowskid/flymake-stylelint/pull/1
+(my/download-github-package "https://github.com/ybiquitous/flymake-stylelint" "unix-formatter")
 (use-package flymake-stylelint
   :load-path (lambda () "git-packages/flymake-stylelint"))
 

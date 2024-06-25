@@ -60,14 +60,17 @@
      " @ Emacs " emacs-version))
 
 ;; Utilities
-(defun my/download-github-package (repo-url)
-  "Download GitHub package from REPO-URL."
+(defun my/download-github-package (repo-url &optional branch)
+  "Download GitHub package from REPO-URL.
+If the optional BRANCH arg is specified, download the branch instead of the default one."
   (let* ((package-name (car (last (split-string repo-url "/"))))
           (package-dir (expand-file-name (format "git-packages/%s" package-name) user-emacs-directory)))
     (message "Downloading '%s' to '%s' ..." repo-url package-dir)
     (if (file-directory-p package-dir)
       (shell-command (format "git -C '%s' pull" package-dir))
-      (shell-command (format "git clone --depth=1 '%s' '%s'" repo-url package-dir)))))
+      (if branch
+        (shell-command (format "git clone --depth=1 '%s' '%s' --branch='%s'" repo-url package-dir branch))
+        (shell-command (format "git clone --depth=1 '%s' '%s'" repo-url package-dir))))))
 
 ;; MELPA (https://github.com/melpa/melpa)
 (require 'package)
