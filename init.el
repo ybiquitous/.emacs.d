@@ -120,6 +120,7 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
   (require 'init-highlight-indent-guides)
   (require 'init-highlight-symbol)
   (require 'init-ido)
+  (require 'init-imenu)
   (require 'init-javascript)
   ;; TODO: Remove
   ;; (require 'init-js-auto-format)
