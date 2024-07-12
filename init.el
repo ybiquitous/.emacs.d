@@ -135,6 +135,7 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
   (require 'init-shell)
   (require 'init-shellscript)
   (require 'init-smart-apostrophe-mode)
+  (require 'init-speedbar)
   (require 'init-super-save)
   (require 'init-terraform)
   (require 'init-tree-sitter)
