@@ -79,12 +79,6 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
-;; HACK: Prevent the error: "Failed to verify signature spinner-1.7.3.el.sig"
-;;
-;; https://metaredux.com/posts/2019/12/09/dealing-with-expired-elpa-gpg-keys.html
-;; https://github.com/emacs-lsp/lsp-mode/issues/1095
-(setq package-check-signature nil)
-
 ;; use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
