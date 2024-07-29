@@ -120,7 +120,6 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
   ;; (require 'init-js-auto-format)
   (require 'init-key-bindings)
   (require 'init-ligature)
-  (require 'init-lsp)
   (require 'init-markdown)
   (require 'init-perl)
   (require 'init-ruby)

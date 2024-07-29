@@ -59,7 +59,6 @@ flycheck_*.el
 /url
 /.cache
 /transient
-/.lsp-session-*
 /eln-cache/
 /request/
 /tree-sitter/
