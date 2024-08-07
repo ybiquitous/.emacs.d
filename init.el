@@ -29,7 +29,6 @@
 (column-number-mode t)
 (display-time-mode t)
 (electric-pair-mode t)
-(global-display-line-numbers-mode t)
 (global-font-lock-mode t)
 (global-hl-line-mode t)
 (line-number-mode t)
@@ -37,6 +36,10 @@
 (show-paren-mode t)
 (tab-bar-mode t)
 (transient-mark-mode t)
+
+(add-hook 'conf-mode-hook #'display-line-numbers-mode)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
 
 ;; GUI
 (when (fboundp 'scroll-bar-mode)
