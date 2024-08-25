@@ -1,5 +1,4 @@
 (use-package magit
-  :pin melpa-stable ;; TODO: https://github.com/magit/magit/issues/5206
   :bind (("C-x g" . magit-status)))
 
 (use-package git-commit
