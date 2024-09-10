@@ -1,7 +1,4 @@
 (use-package magit
-  :bind (("C-x g" . magit-status)))
-
-(use-package git-commit
   :config
   (add-hook 'git-commit-mode-hook #'flyspell-mode)
   :custom
