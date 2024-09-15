@@ -1,4 +1,5 @@
 (use-package speedbar
+  :bind (("C-x C-n" . speedbar))
   :custom
   (speedbar-directory-unshown-regexp "^$")
   (speedbar-update-flag nil)

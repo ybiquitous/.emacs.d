@@ -40,6 +40,9 @@ C-u M-|    `shell-command-on-region' (insert to buffer)
 C-M-s      `isearch-forward-regexp'
 M-s w      `isearch-forward-word'
 
+<Speedbar>
+C-x C-n    `speedbar'
+
 <Misc>
 C-c M-r    `restart-emacs'
 C-c C-r    `revert-buffer-quick'
