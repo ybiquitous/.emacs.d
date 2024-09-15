@@ -27,6 +27,7 @@ C-u M-!    `shell-command' (insert to buffer)
 C-u M-|    `shell-command-on-region' (insert to buffer)
 C-M-s      `isearch-forward-regexp'
 M-s w      `isearch-forward-word'
+M-o        `other-frame'
 ")))
 
 (require 'bind-key)
@@ -42,6 +43,7 @@ M-s w      `isearch-forward-word'
   ("C-c v"   . browse-url-at-point)
   ("C-c l"   . toggle-truncate-lines)
   ("C-c a r" . align-regexp)
-  ("C-c k b" . describe-personal-keybindings))
+  ("C-c k b" . describe-personal-keybindings)
+  ("M-o"     . other-frame))
 
 (provide 'init-key-bindings)
