@@ -12,10 +12,12 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: purcell/setup-emacs@master
+      - name: Check out
+        uses: actions/checkout@v4
+      - name: Set up Emacs
+        uses: purcell/setup-emacs@master
         with:
-          version: "29.3"
+          version: "29.4"
       - name: Install aspell
         run: sudo apt-get install aspell
       - name: Run test
