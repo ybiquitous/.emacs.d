@@ -91,9 +91,6 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
   (require 'use-package)
   (setq use-package-always-ensure t)
 
-  ;; Ensure certain executables are available on your system.
-  (use-package use-package-ensure-system-package)
-
   ;; https://github.com/jwiegley/use-package#diminishing-and-delighting-minor-modes
   (use-package delight)
 
