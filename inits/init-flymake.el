@@ -9,8 +9,4 @@
 (use-package flymake-stylelint
   :load-path (lambda () "git-packages/flymake-stylelint"))
 
-(my/download-github-package "https://github.com/ybiquitous/flymake-hadolint")
-(use-package flymake-hadolint
-  :load-path (lambda () "git-packages/flymake-hadolint"))
-
 (provide 'init-flymake)
