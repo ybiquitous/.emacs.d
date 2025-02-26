@@ -1,6 +1,5 @@
 (use-package server
   :config
-  (server-force-delete)
-  (server-start))
+  (unless (server-running-p) (server-start)))
 
 (provide 'init-server)
