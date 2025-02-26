@@ -122,6 +122,7 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
   (require 'init-ligature)
   (require 'init-markdown)
   (require 'init-perl)
+  (require 'init-project)
   (require 'init-ruby)
   (require 'init-rust)
   (require 'init-server)
