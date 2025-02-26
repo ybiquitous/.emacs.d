@@ -102,8 +102,6 @@
   (require 'init-ido)
   (require 'init-imenu)
   (require 'init-javascript)
-  ;; TODO: Remove
-  ;; (require 'init-js-auto-format)
   (require 'init-key-bindings)
   (require 'init-ligature)
   (require 'init-markdown)
