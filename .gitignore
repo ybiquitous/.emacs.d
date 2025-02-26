@@ -63,4 +63,3 @@ flycheck_*.el
 /request/
 /tree-sitter/
 /multisession/
-/git-packages/

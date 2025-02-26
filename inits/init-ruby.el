@@ -15,8 +15,7 @@
 (use-package ruby-electric
   :hook (ruby-base-mode . ruby-electric-mode))
 
-(my/download-github-package "https://github.com/ybiquitous/rbs-mode")
 (use-package rbs-mode
-  :load-path (lambda () "git-packages/rbs-mode"))
+  :vc (:url "https://github.com/ybiquitous/rbs-mode"))
 
 (provide 'init-ruby)
