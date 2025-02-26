@@ -1,8 +1,7 @@
 ;; https://www.emacswiki.org/emacs/HideShow
 (use-package hideshow)
 
-(my/download-github-package "https://github.com/sheijk/hideshowvis")
 (use-package hideshowvis
-  :load-path (lambda () "git-packages/hideshowvis"))
+  :vc (:url "https://github.com/sheijk/hideshowvis"))
 
 (provide 'init-hideshow)

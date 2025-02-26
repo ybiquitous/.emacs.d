@@ -62,19 +62,6 @@
   '((:eval (if (buffer-file-name) (abbreviate-file-name (buffer-file-name)) "%b"))
      " @ Emacs " emacs-version))
 
-;; Utilities
-(defun my/download-github-package (repo-url &optional branch)
-  "Download GitHub package from REPO-URL.
-If the optional BRANCH arg is specified, download the branch instead of the default one."
-  (let* ((package-name (car (last (split-string repo-url "/"))))
-          (package-dir (expand-file-name (format "git-packages/%s" package-name) user-emacs-directory)))
-    (message "Downloading '%s' to '%s' ..." repo-url package-dir)
-    (if (file-directory-p package-dir)
-      (shell-command (format "git -C '%s' pull" package-dir))
-      (if branch
-        (shell-command (format "git clone --depth=1 '%s' '%s' --branch='%s'" repo-url package-dir branch))
-        (shell-command (format "git clone --depth=1 '%s' '%s'" repo-url package-dir))))))
-
 ;; MELPA (https://github.com/melpa/melpa)
 (require 'package)
 (setq package-install-upgrade-built-in t)
@@ -90,6 +77,7 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
 (eval-when-compile
   (require 'use-package)
   (setq use-package-always-ensure t)
+  (setq use-package-vc-prefer-newest t)
 
   ;; https://github.com/jwiegley/use-package#diminishing-and-delighting-minor-modes
   (use-package delight)
@@ -152,3 +140,16 @@ If the optional BRANCH arg is specified, download the branch instead of the defa
 (setq custom-file "~/.emacs-env.el")
 (when (file-exists-p custom-file)
   (load custom-file))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-vc-selected-packages
+    '((treesit-fold :url "https://github.com/emacs-tree-sitter/treesit-fold"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -1,10 +1,6 @@
-(my/download-github-package "https://github.com/zerolfx/copilot.el")
-
 (use-package copilot
+  :vc (:url "https://github.com/zerolfx/copilot.el")
   :after (:all editorconfig s)
-  :load-path (lambda () "git-packages/copilot.el")
-  ;; :hook
-  ;; (emacs-lisp-mode . copilot-mode)
   :bind (:map copilot-completion-map
           ("<tab>" . 'copilot-accept-completion)
           ("TAB" . 'copilot-accept-completion)
