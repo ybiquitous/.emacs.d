@@ -1,5 +1,5 @@
 (use-package which-key
   :config
-  (which-key-mode t))
+  (which-key-mode))
 
 (provide 'init-which-key)
