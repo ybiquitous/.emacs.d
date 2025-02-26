@@ -25,7 +25,7 @@
 (setq-default line-spacing 0.2)
 
 ;; Mode
-(blink-cursor-mode nil)
+(blink-cursor-mode -1)
 (column-number-mode t)
 (display-time-mode t)
 (electric-pair-mode t)
