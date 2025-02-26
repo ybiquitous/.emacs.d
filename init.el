@@ -26,26 +26,22 @@
 
 ;; Mode
 (blink-cursor-mode -1)
-(column-number-mode t)
-(display-time-mode t)
-(electric-pair-mode t)
-(global-font-lock-mode t)
-(global-hl-line-mode t)
-(line-number-mode t)
-(recentf-mode t)
-(show-paren-mode t)
-(tab-bar-mode t)
-(transient-mark-mode t)
+(column-number-mode)
+(display-time-mode)
+(electric-pair-mode)
+(global-font-lock-mode)
+(global-hl-line-mode)
+(line-number-mode)
+(recentf-mode)
+(set-scroll-bar-mode 'right)
+(show-paren-mode)
+(tab-bar-mode)
+(tool-bar-mode -1)
+(transient-mark-mode)
 
 (add-hook 'conf-mode-hook #'display-line-numbers-mode)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'text-mode-hook #'display-line-numbers-mode)
-
-;; GUI
-(when (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode (quote right)))
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
 
 ;; Face
 (set-face-background 'default "gray8")
