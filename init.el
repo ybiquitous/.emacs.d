@@ -33,7 +33,6 @@
 (global-hl-line-mode)
 (line-number-mode)
 (recentf-mode)
-(set-scroll-bar-mode 'right)
 (show-paren-mode)
 (tab-bar-mode)
 (tool-bar-mode -1)
@@ -42,6 +41,9 @@
 (add-hook 'conf-mode-hook #'display-line-numbers-mode)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'text-mode-hook #'display-line-numbers-mode)
+
+;; Skip non-GUI environments like CI.
+(when (fboundp 'set-scroll-bar-mode) (set-scroll-bar-mode 'right))
 
 ;; Face
 (set-face-background 'default "gray8")
