@@ -1,6 +1,6 @@
 (use-package company
-  :delight
+  :delight " CP"
   :config
-  (global-company-mode t))
+  (global-company-mode))
 
 (provide 'init-company)
