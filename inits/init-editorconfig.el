@@ -1,6 +1,5 @@
 (use-package editorconfig
-  :delight " EC"
   :config
-  (editorconfig-mode t))
+  (editorconfig-mode))
 
 (provide 'init-editorconfig)
