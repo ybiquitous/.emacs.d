@@ -106,6 +106,7 @@
   (require 'init-ligature)
   (require 'init-markdown)
   (require 'init-perl)
+  (require 'init-pkl)
   (require 'init-project)
   (require 'init-ruby)
   (require 'init-rust)
