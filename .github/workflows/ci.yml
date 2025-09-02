@@ -17,7 +17,7 @@ jobs:
       - name: Set up Emacs
         uses: purcell/setup-emacs@b3884972d55f850449e43be74de08f9a97aa3f34 # master
         with:
-          version: "30.1"
+          version: "30.2"
       - name: Install aspell
         run: sudo apt-get install aspell
       - name: Run test
