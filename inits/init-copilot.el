@@ -1,5 +1,4 @@
 (use-package copilot
-  :vc (:url "https://github.com/zerolfx/copilot.el")
   :after (:all editorconfig s)
   :bind (:map copilot-completion-map
           ("<tab>" . 'copilot-accept-completion)
