@@ -11,7 +11,6 @@
   (global-treesit-auto-mode))
 
 (use-package treesit-fold
-  :vc (:url "https://github.com/emacs-tree-sitter/treesit-fold")
   :delight " TS-Fold"
   :hook
   ((ruby-ts-mode yaml-ts-mode) . treesit-fold-mode)
