@@ -77,6 +77,9 @@
   (setq use-package-always-ensure t)
   (setq use-package-vc-prefer-newest t)
 
+  ;; https://stackoverflow.com/questions/58202993/emacs-failed-to-verify-signature-archive-contents-sig
+  (use-package gnu-elpa-keyring-update)
+
   ;; https://github.com/jwiegley/use-package#diminishing-and-delighting-minor-modes
   (use-package delight)
 
