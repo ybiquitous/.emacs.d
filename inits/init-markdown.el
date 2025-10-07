@@ -1,5 +1,4 @@
 (use-package markdown-mode
-  :commands (markdown-mode gfm-mode)
   :mode (("\\.md\\'" . gfm-mode)
          ("\\.markdown\\'" . gfm-mode))
   :init
