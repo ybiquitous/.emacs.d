@@ -24,6 +24,9 @@
 (setq-default tab-width 4)
 (setq-default line-spacing 0.2)
 
+;; Environment
+(unless (getenv "LC_COLLATE") (setenv "LC_COLLATE" "C")) ;; To sort entries including an underscore first (e.g., "__tests__") in dired.
+
 ;; Mode
 (blink-cursor-mode -1)
 (column-number-mode)

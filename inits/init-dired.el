@@ -1,3 +1,7 @@
+(setq
+  insert-directory-program "gls"
+  dired-listing-switches "-al --group-directories-first")
+
 (use-package wdired
   :custom
   (wdired-allow-to-change-permissions t)
