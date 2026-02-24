@@ -26,6 +26,13 @@
     (ansi-color-apply-on-region (point-min) (point-max))))
 (add-to-list 'auto-mode-alist '("\\.log\\'" . my/display-ansi-colors))
 
+(defun my/copy-file-path ()
+  "Copy the current buffer file path to clipboard."
+  (interactive)
+  (when buffer-file-name
+    (kill-new buffer-file-name)
+    (message "Copied file path to clipboard: %s" buffer-file-name)))
+
 (require 'bind-key)
 (bind-keys*
   ("C-c c d" . dasherize-word)
