@@ -15,7 +15,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Set up Emacs
-        uses: purcell/setup-emacs@8415786a52b3a84babd7ffc92a802b06e3780c17 # master
+        uses: purcell/setup-emacs@bdc64dc730ae1fcba200bfd52cb1b4cf6159cbe5 # master
         with:
           version: "30.2"
       - name: Install aspell
