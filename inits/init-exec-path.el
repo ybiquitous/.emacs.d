@@ -1,6 +1,7 @@
 (use-package exec-path-from-shell
   :if window-system
   :config
+  (setenv "INSIDE_EMACS" emacs-version)
   (add-to-list 'exec-path-from-shell-variables "HISTFILE")
   (add-to-list 'exec-path-from-shell-variables "HISTSIZE")
   (add-to-list 'exec-path-from-shell-variables "EDITOR")
