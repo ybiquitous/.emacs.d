@@ -22,7 +22,4 @@
   :init
   (add-to-list 'warning-suppress-log-types '(add-node-modules-path)))
 
-;; Syntax-highlighting for .npmrc
-(add-to-list 'auto-mode-alist '("\\.npmrc\\'" . conf-mode))
-
 (provide 'init-javascript)
