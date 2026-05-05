@@ -16,4 +16,6 @@
   ((ruby-ts-mode yaml-ts-mode) . treesit-fold-mode)
   ((ruby-ts-mode yaml-ts-mode) . treesit-fold-indicators-mode))
 
+;; TODO: Implement a `treesit-fold-parsers-hcl' function for `hcl-ts-mode'.
+
 (provide 'init-tree-sitter)
