@@ -11,7 +11,6 @@
   (global-treesit-auto-mode))
 
 (use-package treesit-fold
-  :delight " TS-Fold"
   :hook
   ((ruby-ts-mode yaml-ts-mode) . treesit-fold-mode)
   ((ruby-ts-mode yaml-ts-mode) . treesit-fold-indicators-mode))
