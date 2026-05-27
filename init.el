@@ -70,6 +70,28 @@
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;; TODO: Remove this block after upgrading to Emacs 31.
+;;
+;; Pre-install the GNU ELPA `compat' package on cold boot.
+;;
+;; Emacs 30 ships a built-in stub `compat.el' (only `compat-call'/`compat-function'
+;; macros) that claims version (30.N.9999), insufficient for packages requiring
+;; `(compat (31 0))'.  This forces an ELPA install, but its activation hits a
+;; `package--reload-previously-loaded' bug: the new `compat.el' evaluates
+;; `(compat--maybe-require)' -> `(require \='compat-31)' before the new package
+;; dir is on `load-path'.  Emacs wraps this in `with-demoted-errors' (warning,
+;; not fatal), but our `debug-on-error t' above promotes it to fatal -- hence
+;; the `let' to suppress it during install.
+;;
+;; Emacs 31's built-in stub will claim version (31.N.9999), satisfying the
+;; dependency without install, so this whole block becomes unnecessary.
+(when (version< emacs-version "31")
+  (unless (locate-library "compat-31")
+    (let ((debug-on-error nil))
+      (unless package-archive-contents
+        (package-refresh-contents))
+      (package-install 'compat))))
+
 ;; use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
