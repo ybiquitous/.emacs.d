@@ -123,6 +123,7 @@
 (require 'init-key-bindings)
 (require 'init-ligature)
 (require 'init-markdown)
+(require 'init-mermaid)
 (require 'init-perl)
 (require 'init-pkl)
 (require 'init-project)

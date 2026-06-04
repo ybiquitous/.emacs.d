@@ -5,6 +5,7 @@
                                     "HISTFILE" "HISTSIZE"
                                     "EDITOR" "VISUAL"
                                     "LANG"
+                                    "PUPPETEER_EXECUTABLE_PATH" ;; required by mermaid-mode & mermaid-cli
                                     ))
   :config
   (setenv "INSIDE_EMACS" emacs-version)
