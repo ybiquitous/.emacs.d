@@ -4,6 +4,7 @@
   :init
   (defun my/customize-markdown-mode ()
     (setq-local whitespace-line-column 1000)
+    (outline-minor-mode)
     (visual-line-mode))
   (add-hook 'markdown-mode-hook #'my/customize-markdown-mode)
   :custom
