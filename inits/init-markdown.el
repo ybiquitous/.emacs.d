@@ -9,13 +9,18 @@
   (add-hook 'markdown-mode-hook #'my/customize-markdown-mode)
   :custom
   (markdown-command "comrak --gfm -e footnotes --unsafe")
-  (markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown-light.css"
-                        "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github.min.css"))
+  (markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown-dark.css"
+                        "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github-dark.min.css"))
   (markdown-xhtml-header-content "
 <style>
   body {
+    background: #151b23;
+    margin: 0;
+  }
+  .markdown-body {
     margin: 2rem auto;
-    max-width: 50rem;
+    padding: 2rem 4rem;
+    width: clamp(420px, 50rem, 80rem);
   }
 </style>
 <script src=\"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js\"></script>
