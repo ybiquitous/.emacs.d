@@ -121,6 +121,7 @@
 (require 'init-ligature)
 (require 'init-markdown)
 (require 'init-mermaid)
+(require 'init-orderless)
 (require 'init-perl)
 (require 'init-project)
 (require 'init-ruby)
