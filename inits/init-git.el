@@ -3,7 +3,8 @@
   (add-hook 'git-commit-mode-hook #'flyspell-mode)
   :custom
   (git-commit-summary-max-length 100)
-  (fill-column 150))
+  (fill-column 150)
+  (magit-diff-refine-hunk 'all))
 
 ;; disable git pager
 (setenv "GIT_PAGER" "")
