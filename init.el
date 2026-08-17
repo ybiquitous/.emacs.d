@@ -130,7 +130,6 @@
 (require 'init-server)
 (require 'init-shell)
 (require 'init-shellscript)
-(require 'init-smart-apostrophe-mode)
 (require 'init-speedbar)
 (require 'init-super-save)
 (require 'init-terraform)
