@@ -27,11 +27,16 @@
 (add-to-list 'auto-mode-alist '("\\.log\\'" . my/display-ansi-colors))
 
 (defun my/copy-file-path ()
-  "Copy the current buffer file path to clipboard."
+  "Copy the current buffer file path to `kill-ring'."
   (interactive)
-  (when buffer-file-name
-    (kill-new buffer-file-name)
-    (message "Copied file path to clipboard: %s" buffer-file-name)))
+  (if-let* ((path (buffer-file-name))
+            (proj (project-current))
+            (root (and proj (project-root proj)))
+            (result (if root (file-relative-name path root) (expand-file-name path))))
+    (progn
+      (kill-new result)
+      (message "Copied `%s'" result))
+    (message "This buffer is not visiting a file.")))
 
 (require 'bind-key)
 (bind-keys*
