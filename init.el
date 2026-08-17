@@ -100,7 +100,7 @@
 
 ;; Sub initializations
 (add-to-list 'load-path (expand-file-name "inits" user-emacs-directory))
-(require 'init-company)
+(require 'init-corfu)
 (require 'init-css)
 (require 'init-dash)
 (require 'init-desktop)
