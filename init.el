@@ -124,7 +124,6 @@
 (require 'init-markdown)
 (require 'init-mermaid)
 (require 'init-perl)
-(require 'init-pkl)
 (require 'init-project)
 (require 'init-ruby)
 (require 'init-rust)
