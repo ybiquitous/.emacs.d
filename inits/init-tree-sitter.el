@@ -11,8 +11,10 @@
   (global-treesit-auto-mode))
 
 (use-package treesit-fold
-  :hook
-  ((ruby-ts-mode yaml-ts-mode) . treesit-fold-mode)
-  ((ruby-ts-mode yaml-ts-mode) . treesit-fold-indicators-mode))
+  :custom
+  (treesit-fold-line-count-show t)
+  :config
+  (global-treesit-fold-mode)
+  (global-treesit-fold-indicators-mode))
 
 (provide 'init-tree-sitter)
