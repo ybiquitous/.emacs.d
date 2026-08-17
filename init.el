@@ -124,7 +124,6 @@
 (require 'init-perl)
 (require 'init-project)
 (require 'init-ruby)
-(require 'init-rust)
 (require 'init-server)
 (require 'init-shell)
 (require 'init-shellscript)
