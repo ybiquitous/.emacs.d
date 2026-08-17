@@ -43,9 +43,6 @@ M-s w      `isearch-forward-word'
 <Speedbar>
 C-x C-n    `speedbar'
 
-<imenu-list>
-C-'        `imenu-list-smart-toggle'
-
 <Misc>
 C-c M-r    `restart-emacs'
 C-c C-r    `revert-buffer-quick'

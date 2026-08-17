@@ -117,7 +117,6 @@
 (require 'init-highlight-indent-guides)
 (require 'init-highlight-symbol)
 (require 'init-ido)
-(require 'init-imenu)
 (require 'init-javascript)
 (require 'init-key-bindings)
 (require 'init-ligature)
