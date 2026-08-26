@@ -4,6 +4,7 @@
   :custom
   (git-commit-summary-max-length 100)
   (fill-column 150)
+  (magit-define-global-key-bindings 'recommended)
   (magit-diff-refine-hunk 'all)
   (magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
   (magit-repository-directories '(("~/git" . 2)))
