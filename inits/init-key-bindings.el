@@ -57,7 +57,7 @@ M-o        `other-frame'
   ("C-h"     . delete-backward-char)
   ("C-x C-q" . view-mode)
   ("C-c C-g" . vc-git-grep)
-  ("C-c C-k" . kill-buffer-and-window)
+  ("C-c q"   . kill-buffer-and-window)
   ("C-c C-r" . revert-buffer-quick)
   ("C-c C-v" . browse-url-of-buffer)
   ("C-c M-r" . restart-emacs)
