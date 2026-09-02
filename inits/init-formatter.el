@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (defcustom my/formatter-command "prettier"
   "A formatter command."
   :group 'my/formatter

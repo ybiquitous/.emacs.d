@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (defun my/add-bundler-exec-path ()
   "Add the path to gems installed by Bundler to the `exec-path`."
   (interactive)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; Usage:
 ;;     (defconst _posix-path-format "\"C:\\Program Files\\Git\\usr\\bin\\%s\"")
 (defun _posix-path (filename)

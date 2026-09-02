@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; https://www.emacswiki.org/emacs/HideShow
 (use-package hideshow
   :hook (emacs-lisp-mode . hs-minor-mode)

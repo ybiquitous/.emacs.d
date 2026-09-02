@@ -4,6 +4,8 @@
   (when (version< emacs-version minver)
     (error "Your Emacs %s is too old, please use Emacs %s+" emacs-version minver)))
 
+(set-default-toplevel-value 'lexical-binding t)
+
 ;; Basic
 (setq auto-save-default nil)
 (setq confirm-kill-emacs 'yes-or-no-p)

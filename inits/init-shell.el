@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (defun my/shell-mode-hook ()
   (local-set-key (kbd "M-p") 'comint-previous-matching-input-from-input)
   (local-set-key (kbd "M-n") 'comint-next-matching-input-from-input)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (defun my/template-word-func (func)
   (let (word bounds start end)
     (setq word (thing-at-point 'symbol))

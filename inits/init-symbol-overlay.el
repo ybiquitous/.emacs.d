@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package symbol-overlay
   :bind (("M-i" . symbol-overlay-put)))
 

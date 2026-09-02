@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package sh-script
   ;; https://github.com/direnv/direnv
   :mode ("\\.envrc\\'" . sh-mode)

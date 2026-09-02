@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-ligatureel
 (use-package ligature
   :config

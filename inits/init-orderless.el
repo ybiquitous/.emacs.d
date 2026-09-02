@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; https://github.com/oantolin/orderless
 (use-package orderless
   :custom

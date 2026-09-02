@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package dash-at-point
   :if (eq system-type 'darwin)
   :ensure-system-package

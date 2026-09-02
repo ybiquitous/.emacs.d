@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (setq
   insert-directory-program "gls"
   dired-listing-switches "-al --group-directories-first")

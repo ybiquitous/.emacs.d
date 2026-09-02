@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package desktop
   :custom
   (desktop-files-not-to-save nil)

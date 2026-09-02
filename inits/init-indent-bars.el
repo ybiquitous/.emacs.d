@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package indent-bars
   :hook ((prog-mode yaml-ts-mode) . indent-bars-mode)
   :custom

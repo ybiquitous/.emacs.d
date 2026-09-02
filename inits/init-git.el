@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package magit
   :config
   (add-hook 'git-commit-mode-hook #'flyspell-mode)

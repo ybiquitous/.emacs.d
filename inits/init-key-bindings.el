@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (defun my/cheatsheet ()
   "Display personal cheatsheet for key bindings."
   (interactive)

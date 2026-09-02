@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package js
   ;; See https://github.com/joaotavora/eglot/discussions/1348
   :bind ([remap js-find-symbol] . xref-find-definitions)

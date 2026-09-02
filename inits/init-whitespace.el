@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package whitespace
   :custom
   (whitespace-action '(auto-cleanup))

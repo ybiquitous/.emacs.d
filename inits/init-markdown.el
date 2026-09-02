@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package markdown-mode
   :mode (("\\.md\\'" . gfm-mode)
          ("\\.markdown\\'" . gfm-mode))

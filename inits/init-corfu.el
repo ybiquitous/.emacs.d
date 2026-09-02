@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; https://github.com/minad/corfu
 (use-package corfu
   :custom

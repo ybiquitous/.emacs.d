@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package mermaid-mode
   :custom
   (mermaid-flags "--scale=2")

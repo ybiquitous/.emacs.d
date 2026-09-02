@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package speedbar
   :bind (("C-x C-n" . speedbar))
   :custom

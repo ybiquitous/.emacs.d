@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (use-package exec-path-from-shell
   :if window-system
   :custom
