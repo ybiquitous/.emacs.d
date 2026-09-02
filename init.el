@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-(let ((minver "29.1"))
+(let ((minver "31.1"))
   (when (version< emacs-version minver)
     (error "Your Emacs %s is too old, please use Emacs %s+" emacs-version minver)))
 
