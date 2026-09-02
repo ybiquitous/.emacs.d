@@ -5,6 +5,7 @@
   (corfu-auto t)
   (corfu-auto-delay 0.15) ;; default: 0.2
   (corfu-auto-prefix 2) ;; default: 3
+  (corfu-cycle t)
   (corfu-preselect 'prompt)
   ;; corfu-popupinfo-mode
   (corfu-popupinfo-delay '(0.5 . 0.3)) ;; default: (2.0 . 0.5)
