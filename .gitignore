@@ -52,6 +52,7 @@ flycheck_*.el
 # --- Custom ---
 !/.dir-locals.el
 /recentf
+/history
 /projectile-bookmarks.eld
 /projectile.cache
 /projects
