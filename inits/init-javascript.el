@@ -7,7 +7,7 @@
   (js-switch-indent-offset tab-width)
   :init
   ;; Node.js supports `.mjs' and `.cjs': https://nodejs.org/api/packages.html
-  (add-to-list 'auto-mode-alist '("\\.[cm]js\\'" . js-mode)))
+  (add-to-list 'auto-mode-alist '("\\.[cm]js\\'" . javascript-mode)))
 
 ;; HACK: Prevent the error on CI: `Cannot open load file: No such file or directory, f'
 ;; See https://github.com/ybiquitous/.emacs.d/actions/runs/8982929204/job/24671576283#step:5:474
