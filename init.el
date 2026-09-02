@@ -16,7 +16,7 @@
 (setq initial-scratch-message nil)
 (setq load-prefer-newer t)
 (setq make-backup-files nil)
-(setq mode-line-collapse-minor-modes t)
+(setq mode-line-collapse-minor-modes '(not flymake-mode))
 (setq ns-pop-up-frames nil)
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
