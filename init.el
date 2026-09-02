@@ -39,6 +39,7 @@
 (global-font-lock-mode)
 (global-hl-line-mode)
 (line-number-mode)
+(mouse-shift-adjust-mode)
 (recentf-mode)
 (show-paren-mode)
 (tab-bar-mode)
