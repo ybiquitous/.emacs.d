@@ -13,7 +13,7 @@
 (defun my/formatter ()
   "Run a formatter."
   (interactive)
-  (if-let ((formatter-path (executable-find my/formatter-command)))
+  (if-let* ((formatter-path (executable-find my/formatter-command)))
     (let* ((target-file-path (expand-file-name buffer-file-name))
            (command-elements (append (list formatter-path) my/formatter-command-args (list target-file-path)))
            (full-command (mapconcat #'shell-quote-argument command-elements " ")))
