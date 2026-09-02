@@ -12,6 +12,7 @@
   :init
   (global-corfu-mode)
   :config
+  (corfu-history-mode)
   (corfu-popupinfo-mode))
 
 (provide 'init-corfu)
