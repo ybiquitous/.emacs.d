@@ -25,7 +25,7 @@
 (setq use-short-answers t)
 (setq vc-follow-symlinks nil)
 (setq-default tab-width 4)
-(setq-default line-spacing 0.2)
+(setq-default line-spacing '(0.1 . 0.1))
 
 ;; Environment
 (unless (getenv "LC_COLLATE") (setenv "LC_COLLATE" "C")) ;; To sort entries including an underscore first (e.g., "__tests__") in dired.
