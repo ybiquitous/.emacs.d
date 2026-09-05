@@ -30,10 +30,9 @@
 (defun my/copy-file-path ()
   "Copy the current buffer file path to `kill-ring'."
   (interactive)
-  (if-let* ((path (buffer-file-name))
-            (root (vc-root-dir))
-            (result (if root (file-relative-name path root) (expand-file-name path))))
-    (progn
+  (if-let* ((path (buffer-file-name)))
+    (let* ((root (vc-root-dir))
+           (result (if root (file-relative-name path root) (expand-file-name path))))
       (kill-new result)
       (message "Copied `%s'" result))
     (message "This buffer is not visiting a file.")))
