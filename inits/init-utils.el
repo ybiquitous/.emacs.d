@@ -37,6 +37,16 @@
       (message "Copied `%s'" result))
     (message "This buffer is not visiting a file.")))
 
+(defun my/read-only-elisp-files ()
+  "Make Emacs's built-in Lisp files read-only."
+  (when-let* ((file buffer-file-name)
+              (lisp-dir (file-name-directory (locate-library "files")))) ;; search for files.el
+    (when (file-in-directory-p (file-truename file) (file-truename lisp-dir))
+      (read-only-mode 1)
+      (flymake-mode -1)
+      (flyspell-mode -1))))
+(add-hook 'find-file-hook #'my/read-only-elisp-files)
+
 (require 'bind-key)
 (bind-keys*
   ("C-c c d" . dasherize-word)
