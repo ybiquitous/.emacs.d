@@ -6,6 +6,11 @@
 
 (set-default-toplevel-value 'lexical-binding t)
 
+;; TODO: Remove this workaround that prevents the byte compile error for magi when no longer needed.
+;; See https://github.com/caldwell/build-emacs/issues/158
+(require 'comp)
+(setq native-comp-driver-options (cons "-mmacosx-version-min=15" native-comp-driver-options))
+
 ;; Basic
 (setq auto-save-default nil)
 (setq confirm-kill-emacs 'yes-or-no-p)
