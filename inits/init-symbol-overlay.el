@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 (use-package symbol-overlay
-  :hook (prog-mode . symbol-overlay-mode)
+  :hook ((prog-mode yaml-ts-mode) . symbol-overlay-mode)
   :bind (("M-i" . symbol-overlay-put)
          ("M-I" . symbol-overlay-remove-all))
   :custom
