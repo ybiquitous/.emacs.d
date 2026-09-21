@@ -11,6 +11,10 @@
 (require 'comp)
 (setq native-comp-driver-options (cons "-mmacosx-version-min=15" native-comp-driver-options))
 
+;; Environment-specific customization. Required to be loaded earlier to prevent this file from being edited unexpectedly.
+(setq custom-file (expand-file-name "init-env.el" user-emacs-directory))
+(load custom-file 'noerror)
+
 ;; Basic
 (setq auto-save-default nil)
 (setq confirm-kill-emacs 'yes-or-no-p)
@@ -135,8 +139,3 @@
 ;; Windows
 (when (eq system-type 'windows-nt)
   (require 'init-windows))
-
-;; Environment-specific customization
-(setq custom-file "~/.emacs-env.el")
-(when (file-exists-p custom-file)
-  (load custom-file))
