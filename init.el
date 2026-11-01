@@ -62,9 +62,8 @@
 ;; Skip non-GUI environments like CI.
 (when (display-graphic-p) (set-scroll-bar-mode 'right))
 
-;; Face
-(set-face-background 'default "gray8")
-(set-face-foreground 'default "snow2")
+;; Theme
+(load-theme 'aurora-drift t)
 
 ;; Locale
 (prefer-coding-system 'utf-8)
