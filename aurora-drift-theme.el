@@ -9,7 +9,7 @@
 ;;
 ;; The terminal palette only defines 16 ANSI colors plus background,
 ;; foreground, cursor, and selection. Everything else here (comments, UI
-;; grays, diff, magit, dired, corfu) is derived from those colors.
+;; grays, diff, dired) is derived from those colors.
 
 (deftheme aurora-drift
   "Dark theme ported from Ghostty's \"Aurora Drift\"."
@@ -22,7 +22,9 @@
       (fg "#e6f1ff")
       (bright-fg "#f7fbff")
       (selection "#263449")
-      (black "#aab7c8")
+      (cursor-color "#00e5ff")
+      ;; ANSI black (palette 0). Used as the normal UI text color.
+      (ui-fg "#aab7c8")
       (red "#ff6b6b")
       (green "#5fd9ad")
       (yellow "#ffd166")
@@ -37,14 +39,19 @@
       (ui-bg-alt "#101a2c")
       (ui-border "#263449")
       (muted "#7b8aa0")
-      (dim "#3d4a5c"))
+      (dim "#4f5e75")
+      (inactive "#5d6b80")
+      (ui-border-subtle "#1a2436")
+      (doc-fg "#9fb0c4")
+      ;; Brighter than the Ghostty selection so the region stands out from bg.
+      (region-bg "#34507a"))
   (custom-theme-set-faces
    'aurora-drift
    ;; Core
    `(default ((,class (:background ,bg :foreground ,fg))))
-   `(cursor ((,class (:background "#00e5ff" :foreground ,bg))))
-   `(region ((,class (:background ,selection :foreground ,bright-fg))))
-   `(secondary-selection ((,class (:background "#1a2436"))))
+   `(cursor ((,class (:background ,cursor-color :foreground ,bg))))
+   `(region ((,class (:background ,region-bg :foreground ,bright-fg))))
+   `(secondary-selection ((,class (:background ,ui-border-subtle))))
    `(highlight ((,class (:background ,ui-border))))
    `(hl-line ((,class (:background ,ui-bg-alt))))
    `(shadow ((,class (:foreground ,muted))))
@@ -62,14 +69,14 @@
    `(window-divider-last-pixel ((,class (:foreground ,ui-border))))
 
    ;; Mode line, header line, tab bar
-   `(mode-line ((,class (:background ,ui-bg :foreground ,black
+   `(mode-line ((,class (:background ,ui-bg :foreground ,ui-fg
                                      :box (:line-width 1 :color ,ui-border)))))
-   `(mode-line-inactive ((,class (:background ,bg :foreground "#5d6b80"
-                                              :box (:line-width 1 :color "#1a2436")))))
+   `(mode-line-inactive ((,class (:background ,bg :foreground ,inactive
+                                              :box (:line-width 1 :color ,ui-border-subtle)))))
    `(mode-line-buffer-id ((,class (:foreground ,fg :weight bold))))
    `(mode-line-emphasis ((,class (:foreground ,cyan))))
-   `(header-line ((,class (:background ,ui-bg :foreground ,black))))
-   `(tab-bar ((,class (:background ,ui-bg :foreground ,black))))
+   `(header-line ((,class (:background ,ui-bg :foreground ,ui-fg))))
+   `(tab-bar ((,class (:background ,ui-bg :foreground ,ui-fg))))
    `(tab-bar-tab ((,class (:background ,ui-border :foreground ,fg))))
    `(tab-bar-tab-inactive ((,class (:background ,ui-bg :foreground ,muted))))
 
@@ -101,7 +108,7 @@
    `(font-lock-comment-face ((,class (:foreground ,muted :slant italic))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
    `(font-lock-constant-face ((,class (:foreground ,yellow))))
-   `(font-lock-doc-face ((,class (:foreground "#9fb0c4" :slant italic))))
+   `(font-lock-doc-face ((,class (:foreground ,doc-fg :slant italic))))
    `(font-lock-function-name-face ((,class (:foreground ,blue))))
    `(font-lock-keyword-face ((,class (:foreground ,magenta))))
    `(font-lock-preprocessor-face ((,class (:foreground ,magenta))))
@@ -123,7 +130,7 @@
    `(diff-added ((,class (:foreground ,green))))
    `(diff-removed ((,class (:foreground ,red))))
    `(diff-changed ((,class (:foreground ,yellow))))
-   `(diff-header ((,class (:background ,ui-bg :foreground ,black))))
+   `(diff-header ((,class (:background ,ui-bg :foreground ,ui-fg))))
    `(diff-file-header ((,class (:background ,ui-bg :foreground ,bright-fg))))
    `(diff-hunk-header ((,class (:background ,ui-bg-alt :foreground ,cyan))))
 
